@@ -1,0 +1,133 @@
+/*! 
+*   Estilos para la pagina generales
+*/
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #282B2D;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+        position: fixed;
+    }
+
+    .top-nav-collapse {
+        padding: 0px;
+    }
+}
+
+.search-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    background: #fff;
+    min-height: 100%;
+}
+
+.about-section {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: justify;;
+    background: #fff;
+}
+
+.map-section {
+    padding-top: 200px;
+    padding-bottom: 30px;
+    text-align: justify;;
+    background: #fff;
+}
+
+.contact-section {
+    padding-top: 20px;
+    padding-bottom: 100px;
+    text-align: center;
+    background: #282B2D;
+}
+
+.contacto-section {
+	padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: justify;;
+    background: #fff;
+	margin-left: 40px;
+    max-width: 800px;
+            }
+.fondo-section {
+		width:100%;
+	    background: #fff;
+}
+			
+.form-group {
+                margin-bottom: 8px;
+            }
+#feedbackForm {
+                font-size: 12px;
+            }
+			
+input[type="file"] {
+    display: none;
+}
+
+#text {
+    display: table; 
+    table-layout: fixed;
+    width: 90%; 
+    margin: 0 auto;
+    background-color: #282B2D;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.delete {
+    background-color: transparent;
+    border: none;
+    color: white;
+    vertical-align: middle;
+    display: block;
+    margin: 0 auto;
+    float: right;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 2px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+    background-color: #F75159;
+}
+
+.button-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    width: 20%;
+    padding: 10px 10px;
+}
+
+.documento {
+    width: 80%;
+    color: white; 
+    vertical-align: middle;
+    display: table-cell;
+    word-wrap: break-word;
+    padding: 10px 10px;
+}
+
+    .hf3 {
+        font-family: 'Arvo', sans-serif; 
+        font-size: 3em;
+        color: #76323F;
+    }

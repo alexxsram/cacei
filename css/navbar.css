@@ -1,0 +1,506 @@
+/* navbar */
+.navbar-default {
+    background-color: #282B2D;
+    border-color: transparent;
+}
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+
+/* title */
+.navbar-default .navbar-brand {
+    color: #777;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+
+
+/* link */
+.navbar-default .navbar-nav > li > a {
+    font-size: 0.9em;
+    color: #DDD;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-default .navbar-nav > li > div > a {
+    font-size: 0.9em;
+    color: #DDD;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-header > a {
+    text-decoration: none;
+}
+.navbar-default .navbar-nav > li > .login-button {
+    color: #2ecc71;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-default .navbar-nav > li > .login-button:hover {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #2ecc71;
+}
+.navbar-default .navbar-nav > li > .login-button-perron {
+    color: #2ecc71;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-default .navbar-nav > li > .login-button-perron:hover {
+    color: white;
+    background-color: #2ecc71;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-default .navbar-nav > li > .logout-button {
+    color: #F63440;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-default .navbar-nav > li > .logout-button:hover {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F63440;
+}
+.navbar-default .navbar-nav > li > .logout-button-perron {
+    color: #F63440;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-default .navbar-nav > li > .logout-button-perron:hover {
+    color: white;
+    background-color: #F63440;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: white;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: white;
+    background-color: #282B2D;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: white;
+    background-color: #282B2D;
+}
+
+
+/* caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #777;
+    border-bottom-color: #777;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #333;
+    border-bottom-color: #333;
+}
+.navbar-default .navbar-nav > .open > a .caret, 
+.navbar-default .navbar-nav > .open > a:hover .caret, 
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 20px 20px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-color: transparent;
+    background-image: none;
+    border: 0px solid transparent;
+    border-radius: 0px;
+}
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+    position: relative;
+    float: right;
+    padding: 20px 20px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-color: #181B1C !important;
+    background-image: none;
+    border: 0px solid transparent;
+    border-radius: 0px;
+}
+
+.navbar-toggle:focus {
+    outline: 0;
+}
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    border-radius: 1px;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 4px;
+}
+
+
+/* versión movil */
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+.brand-container {
+    color: #DDD;
+    margin-top: 5px;
+    display: table; 
+    width: 45%;
+}
+.page-scroll:hover {
+    text-decoration: none;
+}
+
+.brand-container:hover {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Animaciones del boton para mobiles */
+
+/* linea de arriba */
+/* obtiene la animación de inicio */
+.t {
+    -webkit-animation:rotart 0.5s forwards ;
+    -moz-animation:rotart 0.5s forwards ;
+    animation:rotart 0.5s forwards ;
+}
+
+/* animación de inicio */
+@-moz-keyframes    rotart { 100% { -ms-transform: rotate(45deg);     -ms-transform-origin: 20% 40%;     width: 28px;} }
+@-webkit-keyframes rotart { 100% { -webkit-transform: rotate(45deg); -webkit-transform-origin: 20% 40%; width: 28px;} }
+@keyframes         rotart { 100% { transform: rotate(45deg);         transform-origin: 20% 40%;         width: 28px;} }
+
+/* obtiene la animación de final */
+.ta {
+    -webkit-animation:returnt 0.5s forwards ;
+    -moz-animation:returnt 0.5s forwards ;
+    animation:returnt 0.5s forwards ;
+}
+
+/* animación de final */
+@-moz-keyframes returnt { 
+    from {
+        -ms-transform: rotate(45deg);
+        -ms-transform-origin: 20% 40%; 
+        width: 28px;
+    }
+    to { 
+        -ms-transform: rotate(0deg);
+        -ms-transform-origin: 20% 40%; 
+        width: 24px;
+    }
+}
+
+@-webkit-keyframes returnt { 
+    from {
+        -webkit-transform: rotate(45deg);
+        -webkit-transform-origin: 20% 40%; 
+        width: 28px;
+    }
+    to { 
+        -webkit-transform: rotate(0deg);
+        -webkit-transform-origin: 20% 40%; 
+        width: 24px;
+    }
+}
+
+@keyframes returnt { 
+    from {
+        transform: rotate(45deg);
+        transform-origin: 20% 40%; 
+        width: 28px;
+    }
+    to { 
+        transform: rotate(0deg);
+        transform-origin: 20% 40%; 
+        width: 24px;
+    }
+}
+
+
+/* linea de en medio */
+/* obtiene la animación de inicio */
+.m {
+    -webkit-animation:ocultar 0.5s forwards ;
+    -moz-animation:ocultar 0.5s forwards ;
+    animation:ocultar 0.5s forwards ;
+}
+
+/* animación de inicio */
+@-moz-keyframes    ocultar { 100% { opacity: 0; } }
+@-webkit-keyframes ocultar { 100% { opacity: 0; } }
+@keyframes         ocultar { 100% { opacity: 0; } }
+
+/* obtiene la animación de final */
+.ma {
+    -webkit-animation:returnm 0.5s forwards ;
+    -moz-animation:returnm 0.5s forwards ;
+    animation:returnm 0.5s forwards ;
+}
+
+/* animación de final */
+@-moz-keyframes returnm { 
+    from {
+        opacity: 0;
+    }
+    to { 
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes returnm { 
+    from {
+        opacity: 0;
+    }
+    to { 
+        opacity: 1;
+    }
+}
+
+@keyframes returnm { 
+    from {
+        opacity: 0;
+    }
+    to { 
+        opacity: 1;
+    }
+}
+
+
+/* linea de abajo */
+/* obtiene la animación de inicio */
+.b {
+    -webkit-animation:rotarb 0.5s forwards ;
+    -moz-animation:rotarb 0.5s forwards ;
+    animation:rotarb 0.5s forwards ;
+}
+
+/* animación de inicio */
+@-moz-keyframes    rotarb { 100% { -ms-transform: rotate(-45deg);     -ms-transform-origin: 20% 40%;     width: 28px;} }
+@-webkit-keyframes rotarb { 100% { -webkit-transform: rotate(-45deg); -webkit-transform-origin: 20% 40%; width: 28px;} }
+@keyframes         rotarb { 100% { transform: rotate(-45deg);         transform-origin: 20% 40%;         width: 28px;} }
+
+/* obtiene la animación de final */
+.ba {
+    -webkit-animation:returnb 0.5s forwards ;
+    -moz-animation:returnb 0.5s forwards ;
+    animation:returnb 0.5s forwards ;
+}
+
+/* animación de final */
+@-moz-keyframes returnb { 
+    from {
+        -ms-transform: rotate(-45deg);
+        -ms-transform-origin: 20% 40%; 
+        width: 28px;
+    }
+    to { 
+        -ms-transform: rotate(0deg);
+        -ms-transform-origin: 20% 40%; 
+        width: 24px;
+    }
+}
+
+@-webkit-keyframes returnb { 
+    from {
+        -webkit-transform: rotate(-45deg);
+        -webkit-transform-origin: 20% 40%; 
+        width: 28px;
+    }
+    to { 
+        -webkit-transform: rotate(0deg);
+        -webkit-transform-origin: 20% 40%; 
+        width: 24px;
+    }
+}
+
+@keyframes returnb { 
+    from {
+        transform: rotate(-45deg);
+        transform-origin: 20% 40%; 
+        width: 28px;
+    }
+    to { 
+        transform: rotate(0deg);
+        transform-origin: 20% 40%; 
+        width: 24px;
+    }
+}
+
+
+
+/* estilos responsive */
+
+/* celular */
+@media(max-width:767px) {
+
+    .navbar-default div.navbar-collapse {
+        border-top:none;
+        box-shadow:none;
+        background-color: #17171C;
+    }
+
+    .navbar .navbar-collapse {
+        font-size: 1.5em;
+    }
+
+    .navbar-default .navbar-nav > li > a:hover {
+        background-color: #282B2D;
+        color: #DDD;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /* logo */
+    .brand-container {
+        display: block;
+        margin: -8px auto 0px auto;
+        width: 45%;
+        text-align: center;
+    }
+    .divecTitle {
+        font-family: 'Arvo', serif; 
+        font-size:2em; 
+        font-weight: 700; 
+        display: block;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .divecPipe {
+        display: none;
+    }
+    .personalTitle {
+        display: none;
+    }
+
+}
+
+/* tablet */
+@media(min-width:768px){
+
+    .navbar-default .navbar-nav > li > .login-button {
+        color: #2ecc71;
+        font-family: 'Montserrat', sans-serif;
+        border: 1px solid #2ecc71;
+    }
+    
+    .navbar-default .navbar-nav > li > .logout-button {
+        color: #F63440;
+        font-family: 'Montserrat', sans-serif;
+        border: 1px solid #F63440;
+    }
+
+    /* logo */
+    .divecTitle {
+        font-family: 'Arvo', serif; 
+        font-size:2em; font-weight: 700; 
+        display: table-cell;  
+        border: 5px solid transparent; 
+        vertical-align: middle;
+        height: 100%; 
+    }
+
+    .divecPipe {
+        font-family: 'Arvo', serif; 
+        font-size:2em; font-weight: 700; 
+        display: table-cell;  
+        border: 5px 0px solid transparent; 
+        vertical-align: middle;
+        height: 100%; 
+    }
+
+    .personalTitle {
+        font-family: 'Arvo', serif;
+        font-size:1em; 
+        font-weight: 400; 
+        display: table-cell; 
+        border: 5px solid transparent; 
+        vertical-align: middle; 
+        height: 100%;
+    }
+
+}
+
+@media(min-width:992px){
+
+    /* logo */
+    .divecTitle {
+        font-family: 'Arvo', serif; 
+        font-size:2em; font-weight: 700; 
+        display: table-cell;  
+        border: 5px solid transparent; 
+        vertical-align: middle;
+        height: 100%; 
+    }
+
+    .divecPipe {
+        font-family: 'Arvo', serif; 
+        font-size:2em; font-weight: 700; 
+        display: table-cell;  
+        border: 5px 0px solid transparent; 
+        vertical-align: middle;
+        height: 100%; 
+    }
+
+    .personalTitle {
+        font-family: 'Arvo', serif; 
+        font-size:1em; 
+        font-weight: 400; 
+        display: table-cell; 
+        border: 5px solid transparent; 
+        vertical-align: middle; 
+        height: 100%; 
+    }
+
+}
+
+/* desktop */
+@media(min-width:1200px) {
+
+    /* logo */
+    .divecTitle {
+        font-family: 'Arvo', serif; 
+        font-size:2em; font-weight: 700; 
+        display: table-cell;  
+        border: 5px solid transparent; 
+        vertical-align: middle;
+        height: 100%; 
+    }
+
+    .divecPipe {
+        font-family: 'Arvo', serif; 
+        font-size:2em; font-weight: 700; 
+        display: table-cell;  
+        border: 5px 0px solid transparent; 
+        vertical-align: middle;
+        height: 100%; 
+    }
+
+    .personalTitle {
+        font-family: 'Arvo', serif; 
+        font-size:1em; 
+        font-weight: 400; 
+        display: table-cell; 
+        border: 5px solid transparent; 
+        vertical-align: middle; 
+        height: 100%; 
+    }
+
+}
+
+
+

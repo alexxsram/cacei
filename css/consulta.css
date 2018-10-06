@@ -1,0 +1,142 @@
+.infoContainer {
+    margin: 0px 10px 20px 10px; 
+    padding: 20px; 
+    background-color: #606062; 
+    border: 0px solid black;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.infoContainerTitle {
+    text-align: center; 
+    color: white; 
+    font-family: montserrat;
+}
+
+.infoLabel {
+    margin-bottom: 0; 
+    text-align: center; 
+    padding: 10px; 
+    background-color: #282B2D; 
+    color: white; 
+    border-top-right-radius: 25px; 
+    border-top-left-radius: 25px;
+}
+
+.info {
+    margin-top: 0; 
+    padding: 10px; 
+    background-color: #F0F0F0;
+    border-bottom-right-radius: 25px; 
+    border-bottom-left-radius: 25px; 
+    text-align: center;
+}
+
+.breakWord {
+    word-wrap: break-word;
+}
+
+.linkDocumento,
+a > .linkDocumento {
+    vertical-align: middle; 
+    min-width: 90%; 
+    max-width: 90%;
+    padding: 10px;
+    background-color: #00B16A; 
+    border: 0px solid black;
+    border-radius: 15px;
+    text-align: center; 
+    color: white;
+    margin: 10px auto;
+}
+
+.linkDocumento:hover {
+    cursor: pointer;
+}
+
+.idioma {
+    vertical-align: middle;
+    background-color: #282B2D;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    text-align: center; 
+    color: white; 
+    display: inline-block;
+}
+
+.idiomaPorcentaje {
+    vertical-align: middle;
+    display: inline-block;
+    background-color: white;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Tabs */
+
+.tab-nav {
+    background-color: transparent;
+    margin: 0 10px;
+    padding: 0;
+}
+
+ul.tab-nav > li {
+    background-color: #1F2123;
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px 35px 20px;
+    margin-bottom: -25px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+}
+
+ul.tab-nav > li > p {
+    color: white;
+    margin-bottom: 0;
+}
+
+ul.tab-nav > li:hover {
+    background-color: dimgrey;
+    cursor: pointer;
+}
+
+ul.tab-nav > li.selected {
+    background-color: #606062;
+}
+
+/* celular */
+@media(max-width:992px) {
+
+    .idiomaPorcentaje {
+        text-align: center;
+    }
+
+    ul.tab-nav > li {
+        min-width: 100%;
+        border: 2px solid #282B2D;
+    }
+    
+    .infoContainer {
+        border: 2px solid #282B2D;
+    }
+
+}
+
+@media(min-width:993px){
+
+    .idiomaPorcentaje {
+        text-align: left;
+    }
+
+}
+
+@media(min-width:1200px) {
+
+    .idiomaPorcentaje {
+        text-align: left;
+    }
+
+}

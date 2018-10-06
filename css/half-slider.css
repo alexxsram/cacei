@@ -1,0 +1,62 @@
+/* You can change the height of the carousel by changing the height in the class below. It is set to 50% by default, but can be any height! */
+
+.carousel {
+    width: 100%;
+}
+
+/* celular */
+@media(max-width:767px) {
+
+    .carousel {
+        margin-top: 50px;
+        height: 30%;
+    }
+
+}
+
+/* tablet */
+@media(min-width:768px){
+
+    .carousel {
+        margin-top: 90px;
+        height: 45%;
+    }
+
+}
+
+@media(min-width:992px){
+
+    .carousel {
+        margin-top: 90px;
+        height: 45%;
+    }
+
+}
+
+/* desktop */
+@media(min-width:1200px) {
+
+    .carousel {
+        margin-top: 90px;
+        height: 70%;
+    }
+
+}
+
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}

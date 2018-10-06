@@ -1,0 +1,117 @@
+ul.formatos {
+	margin: 20px;
+	padding: 0;
+}
+
+ul.formatos li{
+	list-style: none;
+}
+
+ul.formatos > li {
+	background-color: #101315;
+	color: white;
+	text-align: center;
+}
+
+ul.formatos > li:not(:last-child) {
+	margin-bottom: 10PX;
+}
+
+/* Title */
+ul.formatos > li > div {
+	position: relative;
+	padding: 20px;
+}
+
+ul.formatos > li > div:hover {
+	cursor: pointer;
+	background-color: #151617;
+}
+
+ul.formatos > li > div > h3 {
+	max-width: 80%;
+	margin: auto;
+}
+
+/* Arrow */
+ul.formatos > li > div > div {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	bottom: 20px;
+}
+
+ul.formatos > li > div > div > div {
+	display: table;
+	height: 100%;
+}
+
+ul.formatos > li > div > div > div > span {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 20px;
+	line-height: 0;
+}
+
+/* Links */
+
+ul.formatos > li > ul {
+	display: none;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+ul.formatos > li > ul > a > li {
+	text-align: left;
+	padding: 20px;
+}
+
+ul.formatos > li > ul > a > li:hover {
+	background-color: #EEEEEE;
+}
+
+ul.formatos > li > ul > a > li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+ul.formatos > li > ul > a, 
+ul.formatos > li > ul > a:visited {
+	text-align: left;
+	text-decoration: none;
+	color: black;
+}
+
+ul.formatos > li > ul > li > a:hover {
+	color: #2ecc71;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

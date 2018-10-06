@@ -1,0 +1,124 @@
+.academico-container > a {
+    color: lightgray;
+}
+
+.academico-container:hover > a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.academico-container {
+    padding: 20px;
+    color: lightgrey;
+    text-decoration: none;
+}
+
+.academico-container > a > .circle-avatar {
+    -webkit-animation:fade 0.5s forwards ;
+    -moz-animation:fade 0.5s forwards ;
+    animation:fade 0.5s forwards ;
+}
+
+/* animación de final */
+@-moz-keyframes fade { 
+    from {
+        border: 8px #48E0A4 solid;
+    }
+    to { 
+        border: 8px dimgrey solid;
+    }
+}
+
+@-webkit-keyframes fade { 
+    from {
+        border: 8px #48E0A4 solid;
+    }
+    to { 
+        border: 8px dimgrey solid;
+    }
+}
+
+@keyframes fade { 
+    from {
+        border: 8px #48E0A4 solid;
+    }
+    to { 
+        border: 8px dimgrey solid;
+    }
+}
+
+.academico-container:hover > a > .circle-avatar{
+    -webkit-animation:fadeout 0.5s forwards ;
+    -moz-animation:fadeout 0.5s forwards ;
+    animation:fadeout 0.5s forwards ;
+}
+
+.academico-container:hover > form > .editar,
+.academico-container:hover > form > .eliminar {
+    display: block;
+}
+
+/* animación de final */
+@-moz-keyframes fadeout { 
+    from {
+        border: 8px dimgrey solid;
+    }
+    to { 
+        border: 8px #48E0A4 solid;
+    }
+}
+
+@-webkit-keyframes fadeout { 
+    from {
+        border: 8px dimgrey solid;
+    }
+    to { 
+        border: 8px #48E0A4 solid;
+    }
+}
+
+@keyframes fadeout { 
+    from {
+        border: 8px dimgrey solid;
+    }
+    to { 
+        border: 8px #48E0A4 solid;
+    }
+}
+
+
+.academico-container:hover {
+    color: white!important;
+    text-decoration: none;
+}
+
+.editar {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: dimgray;
+    background-color: transparent;
+    border: none;
+    font-size: 2.5em;
+    display: none;
+}
+
+.editar:hover {
+    color: white;
+}
+
+.eliminar {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: dimgray;
+    background-color: transparent;
+    border: none;
+    font-size: 2.5em;
+    display: none;
+}
+
+.eliminar:hover {
+    color: white;
+}

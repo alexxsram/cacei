@@ -1,0 +1,151 @@
+div.circle-avatar {
+    /* make it responsive */
+    max-width: 60%;
+    width:60%;
+    height:auto;
+    display:block;
+    /* div height to be the same as width*/
+    padding-top:60%;
+
+    /* make it a cirkle */
+    border-radius:50%;
+
+    /* Centering on image`s center*/
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+
+    /* it makes the clue thing, takes smaller dimention to fill div */
+    background-size: cover;
+
+    /* it is optional, for making this div centered in parent*/
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@media(max-width:767px) {
+
+    .divecTitle {
+        font-family: 'Arvo', serif; 
+        font-size:3em; font-weight: 700; 
+        display: inline; width: 32%; 
+        border: 5px solid white; 
+        vertical-align: middle;
+        height: 100%; 
+        color: #363636;
+    }
+
+    .personalTitle {
+        font-family: 'Arvo', serif; 
+        font-size:1.8em; 
+        font-weight: 400; 
+        display: inline-block; 
+        border: 5px solid white; 
+        vertical-align: middle; 
+        height: 100%; 
+        color: #363636;
+    }
+    
+    .hf3 {
+        font-family: 'Arvo', sans-serif; 
+        font-size: 2em;
+        color: #76323F;
+    }
+    
+}
+
+@media(min-width:768px){
+    
+    .divecTitle {
+        font-family: 'Arvo', serif; 
+        font-size:4em; font-weight: 700; 
+        display: table-cell; width: 32%; 
+        border: 5px solid white; 
+        vertical-align: middle;
+        height: 100%; 
+        color: #363636;
+    }
+
+    .personalTitle {
+        font-family: 'Arvo', serif; 
+        font-size:1.8em; 
+        font-weight: 400; 
+        display: table-cell; 
+        border: 5px solid white; 
+        vertical-align: middle; 
+        height: 100%; 
+        color: #363636;
+    }
+
+    .hf3 {
+        font-family: 'Arvo', sans-serif; 
+        font-size: 3em;
+        color: #76323F;
+    }
+
+}
+
+@media(min-width:992px){
+    
+    .divecTitle {
+        font-family: 'Arvo', serif; 
+        font-size:4em; font-weight: 700; 
+        display: table-cell; width: 24%; 
+        border: 5px solid white; 
+        vertical-align: middle;
+        height: 100%; 
+        color: #363636;
+    }
+
+    .personalTitle {
+        font-family: 'Arvo', serif; 
+        font-size:1.8em; 
+        font-weight: 400; 
+        display: table-cell; 
+        border: 5px solid white; 
+        vertical-align: middle; 
+        height: 100%; 
+        color: #363636;
+    }
+
+    .hf3 {
+        font-family: 'Arvo', sans-serif; 
+        font-size: 3em;
+        color: #76323F;
+    }
+
+}
+
+@media(min-width:1200px) {
+
+    .divecTitle {
+        font-family: 'Arvo', serif; 
+        font-size:4em; font-weight: 700; 
+        display: table-cell; width: 20%; 
+        border: 5px solid white; 
+        vertical-align: middle;
+        height: 100%; 
+        color: #363636;
+    }
+
+    .personalTitle {
+        font-family: 'Arvo', serif; 
+        font-size:1.8em; 
+        font-weight: 400; 
+        display: table-cell; 
+        border: 5px solid white; 
+        vertical-align: middle; 
+        height: 100%; 
+        color: #363636;
+    }
+
+    .hf3 {
+        font-family: 'Arvo', sans-serif; 
+        font-size: 3em;
+        color: #76323F;
+    }
+
+}
