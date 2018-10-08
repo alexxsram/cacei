@@ -43,9 +43,9 @@ try{
         Opciones para alumno
       </button>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Tomar asistencia</a>
-        <a class="dropdown-item" href="#">Calificar actividad</a>
-        <a class="dropdown-item" href="#">Calificar examen</a>
+        <a class="dropdown-item" data-toggle="modal" href="#takeAsistencia">Tomar asistencia</a>
+        <a class="dropdown-item" data-toggle="modal" href="#takeActividad">Calificar actividad</a>
+        <a class="dropdown-item" data-toggle="modal" href="#takeExamen">Calificar examen</a>
       </div>
     </div>
 
@@ -57,7 +57,7 @@ try{
         <a class="dropdown-item" data-toggle="modal" href="#editReporte" data-materia="<?php echo $materia->nombre?>" data-idreporte="<?php echo $reporte->id_reporte?>" data-seccion="<?php echo $nrc->seccion?>">Editar</a>
         <a class="dropdown-item" data-toggle="modal" href="#deleteReporte" data-idreporte="<?php echo $reporte->id_reporte?>" data-title="<?php echo $materia->nombre . ' (' . $nrc->seccion .')' ?>">Eliminar</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="../cacei/examples/ESTADO_ACADEMICO_reporte.php?materia=<?php echo $materia->nombre?>&id=<?php echo $reporte->id_reporte?>&seccion=<?php echo $nrc->seccion?>" target="_blank">Generar reporte PDF</a>
+        <a class="dropdown-item" href="../cacei/examples/ESTADO_ACADEMICO_reporte.php?materia=<?php echo $materia->nombre?>&id=<?php echo $reporte->id_reporte?>&seccion=<?php echo $nrc->seccion?>" target="_blank">Generar PDF</a>
       </div>
     </div>
   </div>
@@ -247,18 +247,118 @@ try{
     </table>
   </div>
 
+  <br><br>
+
   <div class="table-responsive">
     <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th class="table-info" colspan="3">
+            Detalles
+          </th>
+        </tr>
+      </thead>
       <tbody>
         <tr>
           <td>
+            <?php
+            $tableAsistencias = 'EA_DIA_CLASE';
+            $sql = "SELECT * FROM ".$tableAsistencias." WHERE fk_clase = :id";
+            $resultado = $base->prepare($sql);
+            $resultado->bindValue(":id", $reporte->fk_clase);
+            $resultado->execute();
+            $tuplas = $resultado->rowcount();
+            if($tuplas != 0) {
+              $arrayAsistencias = $resultado->fetchAll(PDO::FETCH_OBJ);
+            ?>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th># asistencia</th>
+                      <th>Fecha</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php foreach($arrayAsistencias as $asistencias): ?>
+                      <tr>
+                        <td><?php echo $asistencias->id_dia; ?></td>
+                        <td><?php echo $asistencias->fecha; ?></td>
+                      </tr>
+                    <?php endforeach; ?>
+                  </tbody>
+                </table>
+            <?php
+            }
+            ?>
+          </td>
+
+          <td>
+            <?php 
+            $tableActividades = 'EA_ACTIVIDAD';
+            $sql = "SELECT * FROM ".$tableActividades." WHERE fk_clase = :id";
+            $resultado = $base->prepare($sql);
+            $resultado->bindValue(":id", $reporte->fk_clase);
+            $resultado->execute();
+            $tuplas = $resultado->rowcount();
+            if($tuplas != 0) {
+              $arrayActividades = $resultado->fetchAll(PDO::FETCH_OBJ);
+            ?>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th># actividad</th>
+                      <th>Nombre</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php foreach($arrayActividades as $actividades): ?>
+                      <tr>
+                        <td><?php echo $actividades->id_actividad; ?></td>
+                        <td><?php echo $actividades->nombre; ?></td>
+                      </tr>
+                    <?php endforeach; ?>
+                  </tbody>
+                </table>
+              <?php 
+              }
+              ?>
+            </div>
 
           </td>
           <td>
-
-          </td>
-          <td>
-            
+            <?php
+            $tableActividades = 'EA_EXAMEN';
+            $sql = "SELECT * FROM ".$tableActividades." WHERE fk_clase = :id";
+            $resultado = $base->prepare($sql);
+            $resultado->bindValue(":id", $reporte->fk_clase);
+            $resultado->execute();
+            $tuplas = $resultado->rowcount();
+            if($tuplas != 0) {
+              $arrayExamenes = $resultado->fetchAll(PDO::FETCH_OBJ);
+            ?>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th># examen</th>
+                      <th>Nombre</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php foreach($arrayExamenes as $examenes): ?>
+                      <tr>
+                        <td><?php echo $examenes->id_examen; ?></td>
+                        <td><?php echo $examenes->nombre; ?></td>
+                      </tr>
+                    <?php endforeach; ?>
+                  </tbody>
+                </table>
+              </div>
+            <?php
+            }
+            ?>
           </td>
         </tr>
       </tbody>

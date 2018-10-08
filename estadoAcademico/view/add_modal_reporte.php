@@ -327,7 +327,7 @@
                 </button>
             </div>
 
-            <form id="addExamenF" method="post" class="form-horizontal">
+            <form id="addExamenF" method="POST">
                 <div class="modal-body">
                     <div class="alert alert-info text-justify" role="alert"> 
                         El registrar los examenes, permite administrar que examen se va a impartir en tal fecha.
@@ -349,7 +349,7 @@
                             <input class="form-control" type="text" id="nombreEx" name="nombreEx"/>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label class="col-form-label" for="fechaEx">Fecha de aplicación: </label>
                         <div class="input-group">
@@ -369,6 +369,195 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fas fa-window-close"></i> Cerrar</button>
                     <button type="submit" class="btn btn-primary"> <i class="fas fa-save"></i> Agregar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- ****************************************************************** Extra -->
+<!-- Modal tomar asistencia -->
+<div class="modal fade" id="takeAsistencia" tabindex="-1" role="dialog" aria-label="takeAsistanceLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark">
+                <h4 class="modal-title text-white" id="exampleModalLabel"> <strong>Tomar asistencia</strong> </h4>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form id="takeAsistanceF" action="POST">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="col-form-label" for="selectFecha">Fecha de asistencia: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-calendar"></i>
+                                </div>
+                            </div>
+                            <select name="selectFecha" id="selectFecha" class="custom-select">
+                                <option value=''> Selecciona una fecha </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="selectAlumnoAsi">Nombre alumno: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <select name="selectAlumnoAsi" id="selectAlumnoAsi" class="custom-select">
+                                <option value=''> Selecciona un alumno </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fas fa-window-close"></i> Cerrar</button>
+                    <button type="submit" class="btn btn-primary"> <i class="fas fa-save"></i> Agregar asistencia</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal calificar actividad -->
+<div class="modal fade" id="takeActividad" tabindex="-1" role="dialog" aria-label="takeAsistanceLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark">
+                <h4 class="modal-title text-white" id="exampleModalLabel"> <strong>Calificar actividad</strong> </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form id="takeActividadF" action="POST">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="col-form-label" for="selectActividad">Nombre de la actividad: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                            </div>
+                            <select name="selectActividad" id="selectActividad" class="custom-select">
+                                <option value=''> Selecciona una actividad </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="selectAlumnoAct">Nombre alumno: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <select name="selectAlumnoAct" id="selectAlumnoAct" class="custom-select">
+                                <option value=''> Selecciona un alumno </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="calificacionAct">Calificación: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                            </div>
+                            <input class="form-control" type="number" name="calificacionAct" id="calificacionAct" min="0"/>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fas fa-window-close"></i> Cerrar</button>
+                    <button type="submit" class="btn btn-primary"> <i class="fas fa-save"></i> Agregar calificación</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal editar examen -->
+<div class="modal fade" id="takeExamen" tabindex="-1" role="dialog" aria-label="takeAsistanceLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark">
+                <h4 class="modal-title text-white" id="exampleModalLabel"> <strong>Calificar examen</strong> </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form id="takeExamenF" action="POST">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="col-form-label" for="selectExamen">Nombre del examen: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                            </div>
+                            <select name="selectExamen" id="selectExamen" class="custom-select">
+                                <option value=''> Selecciona un examen </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="selectAlumnoExa">Nombre alumno: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <select name="selectAlumnoExa" id="selectAlumnoExa" class="custom-select">
+                                <option value=''> Selecciona un alumno </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="calificacionExa">Calificación: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                            </div>
+                            <input class="form-control" type="number" name="calificacionExa" id="calificacionExa" min="0"/>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fas fa-window-close"></i> Cerrar</button>
+                    <button type="submit" class="btn btn-primary"> <i class="fas fa-save"></i> Agregar calificación</button>
                 </div>
             </form>
         </div>

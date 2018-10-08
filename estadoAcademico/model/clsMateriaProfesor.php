@@ -1,8 +1,8 @@
 <?php
- class ProfesorMateria {
-   public $materia;
-   public $seccion;
-   const TABLA = 'EA_CLASE';
+class ProfesorMateria {
+    public $materia;
+    public $seccion;
+    const TABLA = 'EA_CLASE';
 
     public function __construct($m, $s) {
         $this->materia = $m;
@@ -17,8 +17,7 @@
         $registro = $consulta->fetch();
         if($registro) {
             return new self($registro['fk_materia'], $registro['seccion']);
-        }
-        else{
+        } else {
             return false;
         }
     }
@@ -36,7 +35,6 @@
         $sql = "SELECT * FROM ".self::TABLA." WHERE fk_profesor =".$id;
         return $base->query($sql)->fetchAll(PDO::FETCH_OBJ);
     }
-
- }
+}
 
 ?>
