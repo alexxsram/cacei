@@ -43,7 +43,7 @@ try{
         Opciones para alumno
       </button>
       <div class="dropdown-menu">
-        <a class="dropdown-item" data-toggle="modal" href="#takeAsistencia">Tomar asistencia</a>
+        <a class="dropdown-item" data-toggle="modal" href="#takeAsistencia" onclick="">Tomar asistencia</a>
         <a class="dropdown-item" data-toggle="modal" href="#takeActividad">Calificar actividad</a>
         <a class="dropdown-item" data-toggle="modal" href="#takeExamen">Calificar examen</a>
       </div>

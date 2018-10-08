@@ -134,6 +134,7 @@ else {
 		function cargar() {
 			$('#sidenavD').load('view/dinamic_sidenav.php');
 		}
+
 	</script>
 	<script src="js/validar_formularios.js" type="text/javascript"></script>
 	<script src="js/validar_delete.js" type="text/javascript"></script>

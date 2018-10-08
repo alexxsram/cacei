@@ -620,6 +620,8 @@ $('#addExamen').on('show.bs.modal', function(event) {
     });
 });
 
+//Validación del formulario de editar examenes con el termino "editExamen"
+
 function revisarCheck() {
     if(!$('#selectA').prop('checked')) {
         $('#selectA').val(" ");
