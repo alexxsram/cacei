@@ -280,7 +280,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input class="form-control" type="text" id="idReporteAc" name="idReporteAc" disabled>
+                        <input class="form-control" type="hidden" id="idReporteAc" name="idReporteAc" disabled>
                     </div>
 
                     <div class="form-group">
@@ -329,7 +329,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header bg-dark">
-                <h4 class="modal-title text-white" id="exampleModalLabel"><strong>Agregar actividad</strong></h4>
+                <h4 class="modal-title text-white" id="exampleModalLabel"><strong>Agregar examen</strong></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -343,7 +343,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input class="form-control" type="text" id="idReporteEx" name="idReporteEx" disabled>
+                        <input class="form-control" type="hidden" id="idReporteEx" name="idReporteEx" disabled>
                     </div>
 
                     <div class="form-group">
@@ -403,6 +403,7 @@
 
             <form id="takeAsistanceF" action="POST">
                 <div class="modal-body">
+                    
                     <div class="form-group">
                         <label class="col-form-label" for="selectFecha">Fecha de asistencia: </label>
                         <div class="input-group">

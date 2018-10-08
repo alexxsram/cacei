@@ -83,8 +83,10 @@ $('#editPass').on('show.bs.modal', function (event) {
 $('#addAlumno').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget) // Botón que activó el modal
     var modal = $(this)
+    
     var idReporte = button.data('id')
     $("#idReporte").val(idReporte)
+
     $("#addAlumnoF").validate( {
         rules: {
             codigo: {
