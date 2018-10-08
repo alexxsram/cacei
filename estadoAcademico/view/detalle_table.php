@@ -32,9 +32,9 @@ try{
       <div class="dropdown-menu">
         <a class="dropdown-item" data-toggle="modal" href="#addAlumno" id="<?php echo $reporte->id_reporte?>" data-id="<?php echo $reporte->id_reporte?>">Agregar alumno</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" data-toggle="modal" href="#addDiaAsistencia" id="<?php echo $reporte->fk_clase?>" data-id="<?php echo $reporte->fk_clase?>">Agregar asistencia del día</a>
-        <a class="dropdown-item" data-toggle="modal" href="#addActividad" id="<?php echo $reporte->fk_clase?>" data-id="<?php echo $reporte->fk_clase?>">Agregar actividad</a>
-        <a class="dropdown-item" data-toggle="modal" href="#addExamen" id="<?php echo $reporte->fk_clase?>" data-id="<?php echo $reporte->fk_clase?>">Agregar examen</a>
+        <a class="dropdown-item" data-toggle="modal" href="#addDiaAsistencia" id="<?php echo $reporte->fk_clase?>" data-id="<?php echo $reporte->fk_clase?>" data-idreporte="<?php echo $reporte->id_reporte; ?>">Agregar asistencia del día</a>
+        <a class="dropdown-item" data-toggle="modal" href="#addActividad" id="<?php echo $reporte->fk_clase?>" data-id="<?php echo $reporte->fk_clase?>" data-idreporte="<?php echo $reporte->id_reporte; ?>">Agregar actividad</a>
+        <a class="dropdown-item" data-toggle="modal" href="#addExamen" id="<?php echo $reporte->fk_clase?>" data-id="<?php echo $reporte->fk_clase?>" data-idreporte="<?php echo $reporte->id_reporte; ?>"  >Agregar examen</a>
       </div>
     </div>
 
@@ -310,6 +310,7 @@ try{
                     <tr>
                       <th># actividad</th>
                       <th>Nombre</th>
+                      <th>Fecha entrega</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -317,6 +318,7 @@ try{
                       <tr>
                         <td><?php echo $actividades->id_actividad; ?></td>
                         <td><?php echo $actividades->nombre; ?></td>
+                        <td><?php echo $actividades->fecha; ?></td>
                       </tr>
                     <?php endforeach; ?>
                   </tbody>
@@ -344,6 +346,7 @@ try{
                     <tr>
                       <th># examen</th>
                       <th>Nombre</th>
+                      <th>Fecha aplicación</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -351,6 +354,7 @@ try{
                       <tr>
                         <td><?php echo $examenes->id_examen; ?></td>
                         <td><?php echo $examenes->nombre; ?></td>
+                        <td><?php echo $examenes->fecha; ?></td>
                       </tr>
                     <?php endforeach; ?>
                   </tbody>

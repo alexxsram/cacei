@@ -217,6 +217,10 @@
                     </div>
 
                     <div class="form-group">
+                        <input class="form-control" type="hidden" id="idReporteAs" name="idReporteAs" disabled>
+                    </div>
+
+                    <div class="form-group">
                         <input class="form-control" type="hidden" id="idClaseAs" name="idClaseAs" disabled>
                     </div>
                     
@@ -276,6 +280,10 @@
                     </div>
 
                     <div class="form-group">
+                        <input class="form-control" type="text" id="idReporteAc" name="idReporteAc" disabled>
+                    </div>
+
+                    <div class="form-group">
                         <input class="form-control" type="hidden" id="idClaseAc" name="idClaseAc" disabled>
                     </div>
                     
@@ -332,6 +340,10 @@
                     <div class="alert alert-info text-justify" role="alert"> 
                         El registrar los examenes, permite administrar que examen se va a impartir en tal fecha.
                         <br><strong>Todos los campos son obligatorios</strong>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="idReporteEx" name="idReporteEx" disabled>
                     </div>
 
                     <div class="form-group">

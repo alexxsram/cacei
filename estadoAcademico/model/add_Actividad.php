@@ -11,7 +11,7 @@ $nombre = $_POST['nombre'];
 $fecha = $_POST['fecha'];
 
 try {
-    $sql = "INSERT INTO EA_ACTIVIDAD (id_actividad, fk_clase, nombre, fecha) VALUES (NULL, :fkc, :nom, :fec)";
+    $sql = "INSERT INTO EA_ACTIVIDAD (fk_clase, nombre, fecha) VALUES (:fkc, :nom, :fec)";
     $resultado = $base->prepare($sql);
     $resultado->execute(array(":fkc"=>$fkClase, ":nom"=>$nombre, ":fec"=>$fecha));
     echo "1";

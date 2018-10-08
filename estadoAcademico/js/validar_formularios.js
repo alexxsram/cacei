@@ -256,7 +256,7 @@ $('#editAlumno').on('show.bs.modal', function(event) {
                     mensajeInfo()
                     mensajeEdit.html("El alumno ha sido editado en el reporte")
                     limpiarAlumnoE()
-                    cargarDetalle( $("#idReporteE").val() )
+                    cargarDetalle($("#idReporteE").val())
                 }
                 else if(echo == '2') {
                     mensajeAlerta()
@@ -409,8 +409,13 @@ $('#editReporte').on('show.bs.modal', function(event) {
 $('#addDiaAsistencia').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget) // Botón que activó el modal
     var modal = $(this)
+    
+    var idReporteAs = button.data('idreporte');
+    $('#idReporteAs').val(idReporteAs)
+
     var idClaseAs = button.data('id')
     $('#idClaseAs').val(idClaseAs)
+    
     $('#addDiaAsistenciaF').validate( {
         rules: {
             numeroAs: {
@@ -440,7 +445,7 @@ $('#addDiaAsistencia').on('show.bs.modal', function(event) {
                     mensajeInfo()
                     mensajeEdit.html("El día de asistencia ha sido agregado")
                     limpiarAlumno()
-                    cargarDetalle($("#idClaseAs").val())
+                    cargarDetalle($("#idReporteAs").val())
                 }
                 else if(echo == '2') {
                     mensajeAlerta()
@@ -482,8 +487,13 @@ $('#addDiaAsistencia').on('show.bs.modal', function(event) {
 $('#addActividad').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget) // Botón que activó el modal
     var modal = $(this)
+    
+    var idReporteAc = button.data('idreporte')
+    $('#idReporteAc').val(idReporteAc)
+
     var idClaseAc = button.data('id')
     $('#idClaseAc').val(idClaseAc)
+
     $('#addActividadF').validate( {
         rules: {
             nombreAc: {
@@ -513,7 +523,7 @@ $('#addActividad').on('show.bs.modal', function(event) {
                     mensajeInfo()
                     mensajeEdit.html("La actividad ha sido agregada")
                     limpiarAlumno()
-                    cargarDetalle($("#idClaseAc").val())
+                    cargarDetalle($("#idReporteAc").val())
                 }
                 else if(echo == '2') {
                     mensajeAlerta()
@@ -555,8 +565,13 @@ $('#addActividad').on('show.bs.modal', function(event) {
 $('#addExamen').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget) // Botón que activó el modal
     var modal = $(this)
+    
+    var idReporteEx = button.data('idreporte')
+    $('#idReporteEx').val(idReporteEx)
+    
     var idClaseEx = button.data('id')
     $('#idClaseEx').val(idClaseEx)
+
     $('#addExamenF').validate( {
         rules: {
             nombreEx: {
@@ -586,7 +601,7 @@ $('#addExamen').on('show.bs.modal', function(event) {
                     mensajeInfo()
                     mensajeEdit.html("El examen ha sido agregado")
                     limpiarAlumno()
-                    cargarDetalle($("#idClaseEx").val())
+                    cargarDetalle($("#idReporteEx").val())
                 }
                 else if(echo == '2') {
                     mensajeAlerta()
