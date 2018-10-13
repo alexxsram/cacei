@@ -262,7 +262,7 @@
 </div>
 
 <!-- Modal agregar actividad -->
-<div class="modal fade" id="addActividad" tabindex="-1" role="dialog" aria-labelledby="addAlumnoLabel" aria-hidden="true">
+<div class="modal fade" id="addActividad" tabindex="-1" role="dialog" aria-labelledby="addActividadLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header bg-dark">
@@ -272,9 +272,9 @@
                 </button>
             </div>
 
-            <form id="addActividadF" method="post" class="form-horizontal">
+            <form id="addActividadF" method="POST" class="form-horizontal">
                 <div class="modal-body">
-                    <div class="alert alert-info text-justify" role="alert"> 
+                    <div class="alert alert-info text-justify" role="alert">
                         El registrar las actividades, permite administrar que actividad es dada en una clase.
                         <br><strong>Todos los campos son obligatorios</strong>
                     </div>

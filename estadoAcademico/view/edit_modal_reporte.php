@@ -266,7 +266,7 @@
     </div>
 </div>
 
-<!-- Modal editar asistencia alumno -->
+<!-- Modal editar día asistencia -->
 <div class="modal fade" id="editDiaAsistencia" tabindex="-1" role="dialog" aria-labelledby="addAsistenciaLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -279,13 +279,12 @@
 
             <form id="editDiaAsistenciaF" method="POST">
                 <div class="modal-body">
-
                     <div class="form-group">
                         <input class="form-control" type="hidden" id="idReporteAsE" name="idReporteAsE" disabled/>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-form-label" for="numeroAs"># asistencia: </label>
+                        <label class="col-form-label" for="numeroAsE"># asistencia: </label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
@@ -297,7 +296,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-form-label" for="fechaAs">Fecha: </label>
+                        <label class="col-form-label" for="fechaAsE">Fecha: </label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
@@ -320,6 +319,146 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fas fa-times"></i> Cerrar</button>
                     <button type="submit" class="btn btn-primary"> <i class="fas fa-save"></i> Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal editar actividad -->
+<div class="modal fade" id="editActividad" tabindex="-1" role="dialog" aria-labelledby="editActividadLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark">
+                <h4 class="modal-title text-white" id="exampleModalLabel"><strong>Editar actividad</strong></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form id="editActividadF" method="POST">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input class="form-control" type="hidden" id="idReporteAcE" name="idReporteAcE" disabled/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="numeroAcE"># referencia: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                            </div>
+                            <input class="form-control" type="number" id="numeroAcE" name="numeroAcE" disabled/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="hidden" id="idClaseAcE" name="idClaseAcE" disabled/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="nombreAcE">Nombre: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                            </div>
+                            <input class="form-control" type="text" id="nombreAcE" name="nombreAcE"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="fechaAcE">Fecha de entrega: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-calendar"></i>
+                                </div>
+                            </div>
+                            <input class="form-control" type="date" id="fechaAcE" name="fechaAcE"/>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fas fa-window-close"></i> Cerrar</button>
+                    <button type="submit" class="btn btn-primary"> <i class="fas fa-save"></i> Agregar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal editar actividad -->
+<div class="modal fade" id="editExamen" tabindex="-1" role="dialog" aria-labelledby="editActividadLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark">
+                <h4 class="modal-title text-white" id="exampleModalLabel"><strong>Editar examen</strong></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form id="editExamenF" method="POST">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input class="form-control" type="hidden" id="idReporteExE" name="idReporteExE" disabled/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="numeroExE"># referencia: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                            </div>
+                            <input class="form-control" type="number" id="numeroExE" name="numeroExE" disabled/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="hidden" id="idClaseExE" name="idClaseExE" disabled/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="nombreExE">Nombre: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                            </div>
+                            <input class="form-control" type="text" id="nombreExE" name="nombreExE"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="fechaExE">Fecha de entrega: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-calendar"></i>
+                                </div>
+                            </div>
+                            <input class="form-control" type="date" id="fechaExE" name="fechaExE"/>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fas fa-window-close"></i> Cerrar</button>
+                    <button type="submit" class="btn btn-primary"> <i class="fas fa-save"></i> Agregar</button>
                 </div>
             </form>
         </div>

@@ -8,7 +8,7 @@ function mensajeAlerta() {
     mensajeEdit.removeClass("alert-info");
     mensajeEdit.addClass("alert-danger");
 }
-        
+
 function mensajeInfo() {
     mensajeEdit.removeClass("alert-danger");
     mensajeEdit.addClass("alert-info");
@@ -63,7 +63,7 @@ $('#editPass').on('show.bs.modal', function (event) {
         errorPlacement: function(error, element) {
             // Add the `help-block` class to the error element
             error.addClass("invalid-feedback");
-            
+
             if(element.prop("type") === "checkbox") {
                 error.insertAfter(element.parent("label"));
             } else {
@@ -83,7 +83,7 @@ $('#editPass').on('show.bs.modal', function (event) {
 $('#addAlumno').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget) // Botón que activó el modal
     var modal = $(this)
-    
+
     var idReporte = button.data('id')
     $("#idReporte").val(idReporte)
 
@@ -195,7 +195,7 @@ $('#editAlumno').on('show.bs.modal', function(event) {
     modal.find('.modal-body #nombreE').val(button.data('nombre'))
     modal.find('.modal-body #motivoE').val(button.data('motivo'))
     modal.find('.modal-body #comentarioE').val(button.data('comentario'))
-    
+
     $("#editAlumnoF").validate( {
         rules: {
             codigoAE: {
@@ -411,13 +411,13 @@ $('#editReporte').on('show.bs.modal', function(event) {
 $('#addDiaAsistencia').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget) // Botón que activó el modal
     var modal = $(this)
-    
+
     var idReporteAs = button.data('idreporte');
     $('#idReporteAs').val(idReporteAs)
 
     var idClaseAs = button.data('id')
     $('#idClaseAs').val(idClaseAs)
-    
+
     $('#addDiaAsistenciaF').validate( {
         rules: {
             numeroAs: {
@@ -512,13 +512,13 @@ $('#editDiaAsistencia').on('show.bs.modal', function(event) {
             }).done(function(echo) {
                 if (echo == "1") {
                     mensajeInfo()
-                    mensajeEdit.html("Su reporte se ha editado con éxito");
+                    mensajeEdit.html("El día de asistencia se ha editado con éxito");
                     limpiarReporteE()
                     cargar()
                     cargarDetalle( $("#idReporteAsE").val() )
                 } else {
                     mensajeAlerta()
-                    mensajeEdit.html("Hubo un error, asegúrese de haber seleccionado una materia o no tener un reporte con la materia que seleccionó " + echo);
+                    mensajeEdit.html("Hubo un error al editar el día de asistencia");
                 }
                 mensajeEdit.slideDown(500);
             });
@@ -548,7 +548,7 @@ $('#editDiaAsistencia').on('show.bs.modal', function(event) {
 $('#addActividad').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget) // Botón que activó el modal
     var modal = $(this)
-    
+
     var idReporteAc = button.data('idreporte');
     $('#idReporteAc').val(idReporteAc)
 
@@ -592,7 +592,7 @@ $('#addActividad').on('show.bs.modal', function(event) {
                 }
                 else if(echo != '1' && echo != '2') {
                     mensajeAlerta()
-                    mensajeEdit.html("La actividad ya se encuentra registrado")
+                    mensajeEdit.html("La actividad ya se encuentra registrada")
                 }
                 mensajeEdit.slideDown(500)
             });
@@ -620,16 +620,82 @@ $('#addActividad').on('show.bs.modal', function(event) {
 });
 
 //Validación del formulario de editar actividades con el termino "editActividad"
+$('#editActividad').on('show.bs.modal', function(event) {
+    var button = $(event.relatedTarget) // Botón que activó el modal
+    var modal = $(this)
 
+    modal.find('.modal-body #idReporteAcE').val(button.data('idreporte'))
+    modal.find('.modal-body #numeroAcE').val(button.data('idactividad'))
+    modal.find('.modal-body #idClaseAcE').val(button.data('fkclase'))
+    modal.find('.modal-body #nombreAcE').val(button.data('nombre'))
+    modal.find('.modal-body #fechaAcE').val(button.data('fecha'))
+
+    $('#editActividadF').validate( {
+        rules: {
+            nombreAcE: {
+                required: true
+            },
+            fechaAcE: {
+                required: true
+            }
+        },
+        messages: {
+            nombreAcE: {
+                required: "Ingresa el nuevo nombre de la actividad"
+            },
+            fechaAcE: {
+                required: "Ingresa la nueva fecha"
+            }
+        },
+        submitHandler: function(form) {
+            $.ajax( {
+                url: "model/edit_Actividad.php",
+                type: "POST",
+                dataType: "HTML",
+                data: "id_actividad=" + $("#numeroAcE").val() + "&fk_clase=" + $("#idClaseAcE").val() + "&nombre=" + $("#nombreAcE").val() + "&fecha=" + $("#fechaAcE").val()
+            }).done(function(echo) {
+                if (echo == "1") {
+                    mensajeInfo()
+                    mensajeEdit.html("La actividad se ha editado con éxito");
+                    limpiarReporteE()
+                    cargar()
+                    cargarDetalle( $("#idReporteAcE").val() )
+                } else {
+                    mensajeAlerta()
+                    mensajeEdit.html("Hubo un error al editar la actividad");
+                }
+                mensajeEdit.slideDown(500);
+            });
+        },
+        errorElement: "em",
+        errorPlacement: function(error, element) {
+            // Add the `help-block` class to the error element
+            error.addClass("invalid-feedback");
+
+            if(element.prop("type") === "checkbox") {
+                error.insertAfter(element.parent("label"));
+            } else {
+                error.insertAfter(element);
+            }
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).addClass("is-invalid").removeClass("is-valid");
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).addClass("is-valid").removeClass("is-invalid");
+        }
+    });
+    mensajeEdit.hide()
+});
 
 //Validación del formulario de agregar examenes con el termino "addExamen"
 $('#addExamen').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget) // Botón que activó el modal
     var modal = $(this)
-    
+
     var idReporteEx = button.data('idreporte')
     $('#idReporteEx').val(idReporteEx)
-    
+
     var idClaseEx = button.data('id')
     $('#idClaseEx').val(idClaseEx)
 
@@ -697,6 +763,73 @@ $('#addExamen').on('show.bs.modal', function(event) {
 });
 
 //Validación del formulario de editar examenes con el termino "editExamen"
+$('#editExamen').on('show.bs.modal', function(event) {
+    var button = $(event.relatedTarget) // Botón que activó el modal
+    var modal = $(this)
+
+    modal.find('.modal-body #idReporteExE').val(button.data('idreporte'))
+    modal.find('.modal-body #numeroExE').val(button.data('idexamen'))
+    modal.find('.modal-body #idClaseExE').val(button.data('fkclase'))
+    modal.find('.modal-body #nombreExE').val(button.data('nombre'))
+    modal.find('.modal-body #fechaExE').val(button.data('fecha'))
+
+    $('#editExamenF').validate( {
+        rules: {
+            nombreExE: {
+                required: true
+            },
+            fechaExE: {
+                required: true
+            }
+        },
+        messages: {
+            nombreExE: {
+                required: "Ingresa el nuevo nombre del examen"
+            },
+            fechaExE: {
+                required: "Ingresa la nueva fecha"
+            }
+        },
+        submitHandler: function(form) {
+            $.ajax( {
+                url: "model/edit_Examen.php",
+                type: "POST",
+                dataType: "HTML",
+                data: "id_examen=" + $("#numeroExE").val() + "&fk_clase=" + $("#idClaseExE").val() + "&nombre=" + $("#nombreExE").val() + "&fecha=" + $("#fechaExE").val()
+            }).done(function(echo) {
+                if (echo == "1") {
+                    mensajeInfo()
+                    mensajeEdit.html("El examen se ha editado con éxito");
+                    limpiarReporteE()
+                    cargar()
+                    cargarDetalle( $("#idReporteExE").val() )
+                } else {
+                    mensajeAlerta()
+                    mensajeEdit.html("Hubo un error al editar el examen");
+                }
+                mensajeEdit.slideDown(500);
+            });
+        },
+        errorElement: "em",
+        errorPlacement: function(error, element) {
+            // Add the `help-block` class to the error element
+            error.addClass("invalid-feedback");
+
+            if(element.prop("type") === "checkbox") {
+                error.insertAfter(element.parent("label"));
+            } else {
+                error.insertAfter(element);
+            }
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).addClass("is-invalid").removeClass("is-valid");
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).addClass("is-valid").removeClass("is-invalid");
+        }
+    });
+    mensajeEdit.hide()
+});
 
 function revisarCheck() {
     if(!$('#selectA').prop('checked')) {

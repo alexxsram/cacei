@@ -275,7 +275,7 @@ try{
                 <table class="table table-bordered">
                   <thead>
                     <tr>
-                      <th># asistencia</th>
+                      <th># referencia asistencia</th>
                       <th>Fecha</th>
                       <th>Acciones</th>
                     </tr>
@@ -312,9 +312,10 @@ try{
                 <table class="table table-bordered">
                   <thead>
                     <tr>
-                      <th># actividad</th>
+                      <th># referencia actividad</th>
                       <th>Nombre</th>
                       <th>Fecha entrega</th>
+                      <th>Acciones</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -323,6 +324,9 @@ try{
                         <td><?php echo $actividades->id_actividad; ?></td>
                         <td><?php echo $actividades->nombre; ?></td>
                         <td><?php echo $actividades->fecha; ?></td>
+                        <td>
+                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editActividad" data-idreporte="<?php echo $reporte->id_reporte;?>" data-idactividad="<?php echo $actividades->id_actividad;?>" data-fkclase="<?php echo $actividades->fk_clase;?>" data-nombre="<?php echo $actividades->nombre;?>" data-fecha="<?php echo $actividades->fecha;?>"> <i class="fas fa-edit"></i> Editar </button>
+                        </td>
                       </tr>
                     <?php endforeach; ?>
                   </tbody>
@@ -348,9 +352,10 @@ try{
                 <table class="table table-bordered">
                   <thead>
                     <tr>
-                      <th># examen</th>
+                      <th># referencia examen</th>
                       <th>Nombre</th>
                       <th>Fecha aplicación</th>
+                      <th>Acciones</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -359,6 +364,9 @@ try{
                         <td><?php echo $examenes->id_examen; ?></td>
                         <td><?php echo $examenes->nombre; ?></td>
                         <td><?php echo $examenes->fecha; ?></td>
+                        <td>
+                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editExamen" data-idreporte="<?php echo $reporte->id_reporte;?>" data-idexamen="<?php echo $examenes->id_examen;?>" data-fkclase="<?php echo $examenes->fk_clase;?>" data-nombre="<?php echo $examenes->nombre;?>" data-fecha="<?php echo $examenes->fecha;?>"> <i class="fas fa-edit"></i> Editar </button>
+                        </td>
                       </tr>
                     <?php endforeach; ?>
                   </tbody>
