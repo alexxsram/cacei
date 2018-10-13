@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="216904d2-63ee-43ee-9869-b51643a2203a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/estadoAcademico/js/validar_formularios.js" beforeDir="false" afterPath="$PROJECT_DIR$/estadoAcademico/js/validar_formularios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estadoAcademico/view/add_modal_reporte.php" beforeDir="false" afterPath="$PROJECT_DIR$/estadoAcademico/view/add_modal_reporte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estadoAcademico/view/detalle_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/estadoAcademico/view/detalle_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estadoAcademico/view/edit_modal_reporte.php" beforeDir="false" afterPath="$PROJECT_DIR$/estadoAcademico/view/edit_modal_reporte.php" afterDir="false" />
-    </list>
+    <list default="true" id="216904d2-63ee-43ee-9869-b51643a2203a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,26 +32,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1960" />
-          <entry key="php" value="1433" />
+          <entry key="js" value="1996" />
+          <entry key="php" value="1648" />
+          <entry key="txt" value="130" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="1959" />
-          <entry key="PHP" value="1433" />
+          <entry key="JavaScript" value="1995" />
+          <entry key="PHP" value="1648" />
+          <entry key="PLAIN_TEXT" value="130" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/estadoAcademico/view/detalle_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="367" column="125" selection-start-line="367" selection-start-column="125" selection-end-line="367" selection-end-column="125" />
+            <state relative-caret-position="34">
+              <caret line="289" column="28" selection-start-line="289" selection-start-column="28" selection-end-line="289" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -64,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/estadoAcademico/view/add_modal_reporte.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="264" column="124" selection-start-line="264" selection-start-column="124" selection-end-line="264" selection-end-column="124" />
+            <state relative-caret-position="310">
+              <caret line="389" column="145" selection-start-line="389" selection-start-column="145" selection-end-line="389" selection-end-column="145" />
               <folding>
                 <element signature="n#div#0;n#!!top" />
                 <element signature="n#div#1;n#!!top" />
@@ -83,24 +80,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/estadoAcademico/view/edit_modal_reporte.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="403" column="67" lean-forward="true" selection-start-line="403" selection-start-column="67" selection-end-line="403" selection-end-column="67" />
+            <state relative-caret-position="374">
+              <caret line="397" column="24" selection-start-line="397" selection-start-column="24" selection-end-line="397" selection-end-column="24" />
               <folding>
                 <element signature="n#div#0;n#!!top" />
                 <element signature="n#div#1;n#!!top" />
                 <element signature="n#div#2;n#!!top" />
                 <element signature="n#div#3;n#!!top" />
                 <element signature="n#div#4;n#!!top" />
+                <element signature="n#div#5;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/estadoAcademico/js/validar_formularios.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="797" column="51" lean-forward="true" selection-start-line="797" selection-start-column="51" selection-end-line="797" selection-end-column="51" />
+            <state relative-caret-position="310">
+              <caret line="407" column="112" selection-start-line="407" selection-start-column="112" selection-end-line="407" selection-end-column="112" />
               <folding>
                 <element signature="n#!!block;n#mensajeAlerta#0" />
                 <element signature="n#!!block;n#mensajeInfo#0" />
@@ -112,7 +110,9 @@
                 <element signature="e#14968#17488#0" />
                 <element signature="e#17644#19931#0" />
                 <element signature="e#20071#22565#0" />
+                <element signature="e#22706#25276#0" />
                 <element signature="e#25407#27862#0" />
+                <element signature="e#27806#30297#0" />
                 <element signature="n#!!block;n#revisarCheck#0" />
                 <element signature="n#!!block;n#revisarCheckE#0" />
                 <element signature="n#!!block;n#limpiarPass#0" />
@@ -161,12 +161,12 @@
       <list>
         <option value="$PROJECT_DIR$/estadoAcademico/model/add_diaAsistencia.php" />
         <option value="$PROJECT_DIR$/estadoAcademico/model/edit_diaAsistencia.php" />
-        <option value="$PROJECT_DIR$/estadoAcademico/view/add_modal_reporte.php" />
         <option value="$PROJECT_DIR$/estadoAcademico/model/edit_Actividad.php" />
-        <option value="$PROJECT_DIR$/estadoAcademico/view/detalle_table.php" />
-        <option value="$PROJECT_DIR$/estadoAcademico/js/validar_formularios.js" />
-        <option value="$PROJECT_DIR$/estadoAcademico/view/edit_modal_reporte.php" />
         <option value="$PROJECT_DIR$/estadoAcademico/model/edit_Examen.php" />
+        <option value="$PROJECT_DIR$/estadoAcademico/view/edit_modal_reporte.php" />
+        <option value="$PROJECT_DIR$/estadoAcademico/js/validar_formularios.js" />
+        <option value="$PROJECT_DIR$/estadoAcademico/view/add_modal_reporte.php" />
+        <option value="$PROJECT_DIR$/estadoAcademico/view/detalle_table.php" />
       </list>
     </option>
   </component>
@@ -199,12 +199,6 @@
               <item name="cacei" type="b2602c69:ProjectViewProjectNode" />
               <item name="cacei" type="462c0819:PsiDirectoryNode" />
               <item name="estadoAcademico" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cacei" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cacei" type="462c0819:PsiDirectoryNode" />
-              <item name="estadoAcademico" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -242,12 +236,20 @@
       <option name="presentableId" value="Default" />
       <updated>1538276469908</updated>
       <workItem from="1538276486584" duration="5308000" />
-      <workItem from="1539403651327" duration="8337000" />
+      <workItem from="1539403651327" duration="9265000" />
     </task>
+    <task id="LOCAL-00001" summary="Implementación de botones eliminar en asistencias, actividades y examenes, falta implementar los modal y sus funciones">
+      <created>1539414757359</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539414757359</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13645000" />
+    <option name="totallyTimeSpent" value="14573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -265,7 +267,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295082" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -300,6 +302,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implementación de botones eliminar en asistencias, actividades y examenes, falta implementar los modal y sus funciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementación de botones eliminar en asistencias, actividades y examenes, falta implementar los modal y sus funciones" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/estadoAcademico/view/add_modals_reporte.php">
@@ -336,44 +342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/estadoAcademico/view/add_modal_reporte.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="264" column="124" selection-start-line="264" selection-start-column="124" selection-end-line="264" selection-end-column="124" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-            <element signature="n#div#1;n#!!top" />
-            <element signature="n#div#2;n#!!top" />
-            <element signature="n#div#3;n#!!top" />
-            <element signature="n#div#4;n#!!top" />
-            <element signature="n#div#5;n#!!top" />
-            <element signature="n#div#6;n#!!top" />
-            <element signature="n#div#7;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/estadoAcademico/view/detalle_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="367" column="125" selection-start-line="367" selection-start-column="125" selection-end-line="367" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/estadoAcademico/view/edit_modal_reporte.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="403" column="67" lean-forward="true" selection-start-line="403" selection-start-column="67" selection-end-line="403" selection-end-column="67" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-            <element signature="n#div#1;n#!!top" />
-            <element signature="n#div#2;n#!!top" />
-            <element signature="n#div#3;n#!!top" />
-            <element signature="n#div#4;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/estadoAcademico/model/edit_Actividad.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -390,8 +358,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/estadoAcademico/js/validar_formularios.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="797" column="51" lean-forward="true" selection-start-line="797" selection-start-column="51" selection-end-line="797" selection-end-column="51" />
+        <state relative-caret-position="310">
+          <caret line="407" column="112" selection-start-line="407" selection-start-column="112" selection-end-line="407" selection-end-column="112" />
           <folding>
             <element signature="n#!!block;n#mensajeAlerta#0" />
             <element signature="n#!!block;n#mensajeInfo#0" />
@@ -403,7 +371,9 @@
             <element signature="e#14968#17488#0" />
             <element signature="e#17644#19931#0" />
             <element signature="e#20071#22565#0" />
+            <element signature="e#22706#25276#0" />
             <element signature="e#25407#27862#0" />
+            <element signature="e#27806#30297#0" />
             <element signature="n#!!block;n#revisarCheck#0" />
             <element signature="n#!!block;n#revisarCheckE#0" />
             <element signature="n#!!block;n#limpiarPass#0" />
@@ -415,6 +385,45 @@
             <element signature="n#!!block;n#cargarDetalle#0" />
             <element signature="n#!!block;n#cargar#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estadoAcademico/view/edit_modal_reporte.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="397" column="24" selection-start-line="397" selection-start-column="24" selection-end-line="397" selection-end-column="24" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="n#div#1;n#!!top" />
+            <element signature="n#div#2;n#!!top" />
+            <element signature="n#div#3;n#!!top" />
+            <element signature="n#div#4;n#!!top" />
+            <element signature="n#div#5;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estadoAcademico/view/add_modal_reporte.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="389" column="145" selection-start-line="389" selection-start-column="145" selection-end-line="389" selection-end-column="145" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="n#div#1;n#!!top" />
+            <element signature="n#div#2;n#!!top" />
+            <element signature="n#div#3;n#!!top" />
+            <element signature="n#div#4;n#!!top" />
+            <element signature="n#div#5;n#!!top" />
+            <element signature="n#div#6;n#!!top" />
+            <element signature="n#div#7;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estadoAcademico/view/detalle_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="289" column="28" selection-start-line="289" selection-start-column="28" selection-end-line="289" selection-end-column="28" />
         </state>
       </provider>
     </entry>
