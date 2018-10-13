@@ -405,8 +405,7 @@ $('#editReporte').on('show.bs.modal', function(event) {
     mensajeEdit.hide();
 });
 
-
-///************************************************************************** agregado por Alex */
+///************************************************************************************************************* agregado por Alex */
 //Validación del formulario de agregar días de asistencia con el termino "addDiaAsistencia"
 $('#addDiaAsistencia').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget) // Botón que activó el modal

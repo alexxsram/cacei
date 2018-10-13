@@ -387,8 +387,7 @@
     </div>
 </div>
 
-
-<!-- ****************************************************************** Extra -->
+<!-- *******************************************************************************************************************************************+ Extra -->
 <!-- Modal tomar asistencia -->
 <div class="modal fade" id="takeAsistencia" tabindex="-1" role="dialog" aria-label="takeAsistanceLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">

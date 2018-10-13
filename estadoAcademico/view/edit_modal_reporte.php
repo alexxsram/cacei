@@ -395,7 +395,7 @@
     </div>
 </div>
 
-<!-- Modal editar actividad -->
+<!-- Modal editar examen -->
 <div class="modal fade" id="editExamen" tabindex="-1" role="dialog" aria-labelledby="editActividadLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">

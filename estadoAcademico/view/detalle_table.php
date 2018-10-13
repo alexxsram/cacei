@@ -287,6 +287,7 @@ try{
                         <td><?php echo $asistencias->fecha; ?></td>
                         <th>
                             <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editDiaAsistencia" data-idreporte="<?php echo $reporte->id_reporte;?>" data-iddia="<?php echo $asistencias->id_dia;?>" data-fecha="<?php echo $asistencias->fecha;?>" data-fkclase="<?php echo $asistencias->fk_clase;?>"> <i class="fas fa-edit"></i> Editar </button>
+                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteDiaAsistencia" data-iddia="<?php echo $asistencias->id_dia;?>"> <i class="fas fa-trash"></i> Eliminar </button>
                         </th>
                       </tr>
                     <?php endforeach; ?>
@@ -326,6 +327,7 @@ try{
                         <td><?php echo $actividades->fecha; ?></td>
                         <td>
                             <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editActividad" data-idreporte="<?php echo $reporte->id_reporte;?>" data-idactividad="<?php echo $actividades->id_actividad;?>" data-fkclase="<?php echo $actividades->fk_clase;?>" data-nombre="<?php echo $actividades->nombre;?>" data-fecha="<?php echo $actividades->fecha;?>"> <i class="fas fa-edit"></i> Editar </button>
+                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteActividad" data-idactividad="<?php echo $actividades->id_actividad;?>"> <i class="fas fa-trash"></i> Eliminar </button>
                         </td>
                       </tr>
                     <?php endforeach; ?>
@@ -366,6 +368,7 @@ try{
                         <td><?php echo $examenes->fecha; ?></td>
                         <td>
                             <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editExamen" data-idreporte="<?php echo $reporte->id_reporte;?>" data-idexamen="<?php echo $examenes->id_examen;?>" data-fkclase="<?php echo $examenes->fk_clase;?>" data-nombre="<?php echo $examenes->nombre;?>" data-fecha="<?php echo $examenes->fecha;?>"> <i class="fas fa-edit"></i> Editar </button>
+                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteExamen" data-idexamen="<?php echo $examenes->id_examen;?>"> <i class="fas fa-trash"></i> Eliminar </button>
                         </td>
                       </tr>
                     <?php endforeach; ?>
