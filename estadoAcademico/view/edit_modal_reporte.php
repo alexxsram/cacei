@@ -265,3 +265,63 @@
         </div>
     </div>
 </div>
+
+<!-- Modal editar asistencia alumno -->
+<div class="modal fade" id="editDiaAsistencia" tabindex="-1" role="dialog" aria-labelledby="addAsistenciaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark">
+                <h4 class="modal-title text-white" id="exampleModalLabel"><strong>Editar Asistencia</strong></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form id="editDiaAsistenciaF" method="POST">
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <input class="form-control" type="hidden" id="idReporteAsE" name="idReporteAsE" disabled/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="numeroAs"># asistencia: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                            </div>
+                            <input class="form-control" type="number" id="numeroAsE" name="numeroAsE" disabled/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="fechaAs">Fecha: </label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-calendar"></i>
+                                </div>
+                            </div>
+                            <input class="form-control" type="date" id="fechaAsE" name="fechaAsE"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="hidden" id="idClaseAsE" name="idClaseAsE" disabled/>
+                    </div>
+
+                    <div class="alert alert-info alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fas fa-times"></i> Cerrar</button>
+                    <button type="submit" class="btn btn-primary"> <i class="fas fa-save"></i> Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

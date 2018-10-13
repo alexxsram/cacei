@@ -483,17 +483,76 @@ $('#addDiaAsistencia').on('show.bs.modal', function(event) {
 });
 
 //Validación del formulario de editar días de asistencia con el termino "editDiaAsistencia"
+$('#editDiaAsistencia').on('show.bs.modal', function(event) {
+    var button = $(event.relatedTarget) // Botón que activó el modal
+    var modal = $(this)
 
+    modal.find('.modal-body #idReporteAsE').val(button.data('idreporte'))
+    modal.find('.modal-body #numeroAsE').val(button.data('iddia'))
+    modal.find('.modal-body #fechaAsE').val(button.data('fecha'))
+    modal.find('.modal-body #idClaseAsE').val(button.data('fkclase'))
+
+    $('#editDiaAsistenciaF').validate( {
+        rules: {
+            fechaAsE: {
+                required: true
+            }
+        },
+        messages: {
+            fechaAsE: {
+                required: "Ingresa la nueva fecha"
+            }
+        },
+        submitHandler: function(form) {
+            $.ajax( {
+                url: "model/edit_diaAsistencia.php",
+                type: "POST",
+                dataType: "HTML",
+                data: "id_dia=" + $("#numeroAsE").val() + "&fecha=" + $("#fechaAsE").val() + "&fk_clase=" + $("#idClaseAsE").val()
+            }).done(function(echo) {
+                if (echo == "1") {
+                    mensajeInfo()
+                    mensajeEdit.html("Su reporte se ha editado con éxito");
+                    limpiarReporteE()
+                    cargar()
+                    cargarDetalle( $("#idReporteAsE").val() )
+                } else {
+                    mensajeAlerta()
+                    mensajeEdit.html("Hubo un error, asegúrese de haber seleccionado una materia o no tener un reporte con la materia que seleccionó " + echo);
+                }
+                mensajeEdit.slideDown(500);
+            });
+        },
+        errorElement: "em",
+            errorPlacement: function(error, element) {
+            // Add the `help-block` class to the error element
+            error.addClass("invalid-feedback");
+
+            if(element.prop("type") === "checkbox") {
+                error.insertAfter(element.parent("label"));
+            } else {
+                error.insertAfter(element);
+            }
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).addClass("is-invalid").removeClass("is-valid");
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).addClass("is-valid").removeClass("is-invalid");
+        }
+    });
+    mensajeEdit.hide()
+});
 
 //Validación del formulario de agregar actividades con el termino "addActividad"
 $('#addActividad').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget) // Botón que activó el modal
     var modal = $(this)
     
-    var idReporteAc = button.data('idreporte')
+    var idReporteAc = button.data('idreporte');
     $('#idReporteAc').val(idReporteAc)
 
-    var idClaseAc = button.data('id')
+    var idClaseAc = button.data('id');
     $('#idClaseAc').val(idClaseAc)
 
     $('#addActividadF').validate( {

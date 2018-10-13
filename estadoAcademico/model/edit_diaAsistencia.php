@@ -11,9 +11,9 @@ $fecha = $_POST['fecha'];
 $fkClase = $_POST['fk_clase'];
 
 try {
-    $sql = "INSERT INTO EA_DIA_CLASE (id_dia, fecha, fk_clase) VALUES (:idd, :fec, :fkc)";
+    $sql = "UPDATE EA_DIA_CLASE SET fecha = :fec WHERE id_dia = :idd AND fk_clase = :fkc";
     $resultado = $base->prepare($sql);
-    $resultado->execute(array(":idd"=>$idDia, ":fec"=>$fecha, ":fkc"=>$fkClase));
+    $resultado->execute(array(":fec"=>$fecha, ":idd"=>$idDia, ":fkc"=>$fkClase));
     echo "1";
 } catch(Exception $e) {
     echo "Sucedio este error: ".$e->GetMessage();

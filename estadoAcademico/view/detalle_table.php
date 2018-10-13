@@ -227,7 +227,7 @@ try{
 
           <td class="text-left accion">
             <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-outline-warning btn-sm" data-toggle="modal" 
+              <button type="button" class="btn btn-warning btn-sm" data-toggle="modal"
               data-target="#editAlumno" 
               data-idreporte="<?php echo $reporte->id_reporte?>"
               data-fkreporte="<?php echo $detalleReporte->fk_reporte; ?>"
@@ -277,6 +277,7 @@ try{
                     <tr>
                       <th># asistencia</th>
                       <th>Fecha</th>
+                      <th>Acciones</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -284,6 +285,9 @@ try{
                       <tr>
                         <td><?php echo $asistencias->id_dia; ?></td>
                         <td><?php echo $asistencias->fecha; ?></td>
+                        <th>
+                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editDiaAsistencia" data-idreporte="<?php echo $reporte->id_reporte;?>" data-iddia="<?php echo $asistencias->id_dia;?>" data-fecha="<?php echo $asistencias->fecha;?>" data-fkclase="<?php echo $asistencias->fk_clase;?>"> <i class="fas fa-edit"></i> Editar </button>
+                        </th>
                       </tr>
                     <?php endforeach; ?>
                   </tbody>
