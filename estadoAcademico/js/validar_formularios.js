@@ -834,7 +834,6 @@ $('#takeActividad').on('show.bs.modal', function(event) {
     });
 });
 
-
 //Validación del formulario de agregar examenes con el termino "addExamen"
 $('#addExamen').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget) // Botón que activó el modal
@@ -977,6 +976,85 @@ $('#editExamen').on('show.bs.modal', function(event) {
     mensajeEdit.hide()
 });
 
+//Validación del formulario para calificar examenes con el termino "takeExamen"
+$('#takeActividad').on('show.bs.modal', function(event) {
+    var button = $(event.relatedTarget) // Botón que activó el modal
+    var modal = $(this)
+
+    var idReporte = button.data('idreporte');
+    $('#idReporteExa').val(idReporte)
+
+    var fkClase = button.data('fkclase');
+
+    ejecutarSelectAjax('POST', 'get_Examenes.php', 'fk_clase='+fkClase, '#selectExamenExa');
+    ejecutarSelectAjax('POST', 'get_Alumnos.php', 'fk_clase='+fkClase, '#selectAlumnoExa');
+
+    $('#takeExamenF').validate( {
+        rules: {
+            selectExamenExa: {
+                required: true
+            },
+            selectAlumnoExa: {
+                required: true
+            },
+            calificacionExa: {
+                required: true
+            }
+        },
+        messages: {
+            selectExamenExa: {
+                required: "Selecciona el examen"
+            },
+            selectAlumnoExa: {
+                required: "Selecciona al alumno"
+            },
+            calificacionExa: {
+                required: "Ingresa la calificación"
+            }
+        },
+        submitHandler: function(form) {
+            $.ajax( {
+                url: "model/take_Examen.php",
+                type: "POST",
+                dataType: "HTML",
+                data: "fk_examen=" + $("#selectExamenExa").val() + "&fk_alumno=" + $("#selectAlumnoExa").val() + "&calificacion=" + $("#calificacionExa").val()
+            }).done(function(echo) {
+                if (echo == "1") {
+                    mensajeInfo()
+                    mensajeEdit.html("El examen fue calificado al alumno");
+                    limpiarExamenE()
+                    cargarDetalle( $("#idReporteExa").val() )
+                } else if (echo == "2") {
+                    mensajeInfo()
+                    mensajeEdit.html("Se actualizo la calificación del examen al alumno");
+                    limpiarExamenE()
+                    cargarDetalle( $("#idReporteExa").val() )
+                } else {
+                    mensajeAlerta()
+                    mensajeEdit.html("Hubo un error al calificar el examen");
+                }
+                mensajeEdit.slideDown(500);
+            });
+        },
+        errorElement: "em",
+        errorPlacement: function(error, element) {
+            // Add the `help-block` class to the error element
+            error.addClass("invalid-feedback");
+
+            if(element.prop("type") === "checkbox") {
+                error.insertAfter(element.parent("label"));
+            } else {
+                error.insertAfter(element);
+            }
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).addClass("is-invalid").removeClass("is-valid");
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).addClass("is-valid").removeClass("is-invalid");
+        }
+    });
+});
 
 function revisarCheck() {
     if(!$('#selectA').prop('checked')) {

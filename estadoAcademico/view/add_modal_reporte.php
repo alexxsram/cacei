@@ -540,7 +540,6 @@
                                 </div>
                             </div>
                             <select name="selectExamenExa" id="selectExamenExa" class="custom-select">
-                                <option value=''> Selecciona un examen </option>
                             </select>
                         </div>
                     </div>
@@ -554,7 +553,6 @@
                                 </div>
                             </div>
                             <select name="selectAlumnoExa" id="selectAlumnoExa" class="custom-select">
-                                <option value=''> Selecciona un alumno </option>
                             </select>
                         </div>
                     </div>
