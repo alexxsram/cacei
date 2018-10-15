@@ -977,7 +977,7 @@ $('#editExamen').on('show.bs.modal', function(event) {
 });
 
 //Validación del formulario para calificar examenes con el termino "takeExamen"
-$('#takeActividad').on('show.bs.modal', function(event) {
+$('#takeExamen').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget) // Botón que activó el modal
     var modal = $(this)
 

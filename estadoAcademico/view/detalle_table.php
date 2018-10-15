@@ -227,18 +227,22 @@ try{
             </div>
           </td>
 
-          <td class="text-left accion">
+          <td class="text-center accion">
             <div class="btn-group" role="group" aria-label="Basic example">
               <button type="button" class="btn btn-warning btn-sm" data-toggle="modal"
-              data-target="#editAlumno" 
-              data-idreporte="<?php echo $reporte->id_reporte?>"
-              data-fkreporte="<?php echo $detalleReporte->fk_reporte; ?>"
-              data-codigo="<?php echo $detalleReporte->codigo; ?>"
-              data-nombre="<?php echo $detalleReporte->nombre; ?>"
-              data-motivo="<?php echo $detalleReporte->motivo; ?>"
-              data-comentario="<?php echo $detalleReporte->comentario; ?>"> <i class="fas fa-edit"></i> Editar</button>
-              
-              <!--<button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#deleteAlumno" data-codigo="<?php echo $detalleReporte->codigo?>" data-iddetalle="<?php echo $detalleReporte->fk_reporte?>" data-idreporte="<?php echo $reporte->id_reporte?>"> <i class="fas fa-times"></i> Eliminar</button>-->
+                      data-target="#editAlumno"
+                      data-idreporte="<?php echo $reporte->id_reporte;?>"
+                      data-fkreporte="<?php echo $detalleReporte->fk_reporte;?>"
+                      data-codigo="<?php echo $detalleReporte->codigo;?>"
+                      data-nombre="<?php echo $detalleReporte->nombre;?>"
+                      data-motivo="<?php echo $detalleReporte->motivo;?>"
+                      data-comentario="<?php echo $detalleReporte->comentario;?>"> <i class="fas fa-edit"></i> Editar</button>
+
+              <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                      data-target="#deleteAlumno"
+                      data-codigo="<?php echo $detalleReporte->codigo;?>"
+                      data-nombre="<?php echo $detalleReporte->nombre;?>"
+                      data-idreporte="<?php echo $reporte->id_reporte;?>"> <i class="fas fa-times"></i> Eliminar</button>
             </div>
           </td>
         </tr>
@@ -248,146 +252,146 @@ try{
       </tbody>
     </table>
   </div>
-
-  <br><br>
-
-  <div class="table-responsive">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th class="table-info" colspan="3">
-            Detalles
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <?php
-            $tableAsistencias = 'EA_DIA_CLASE';
-            $sql = "SELECT * FROM ".$tableAsistencias." WHERE fk_clase = :id ORDER BY fecha ASC";
-            $resultado = $base->prepare($sql);
-            $resultado->bindValue(":id", $reporte->fk_clase);
-            $resultado->execute();
-            $tuplas = $resultado->rowcount();
-            if($tuplas != 0) {
-              $arrayAsistencias = $resultado->fetchAll(PDO::FETCH_OBJ);
-            ?>
-              <div class="table-responsive">
-                <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th># referencia asistencia</th>
-                      <th>Fecha</th>
-                      <th>Acciones</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php foreach($arrayAsistencias as $asistencias): ?>
-                      <tr>
-                        <td><?php echo $asistencias->id_dia; ?></td>
-                        <td><?php echo $asistencias->fecha; ?></td>
-                        <th>
-                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editDiaAsistencia" data-idreporte="<?php echo $reporte->id_reporte;?>" data-iddia="<?php echo $asistencias->id_dia;?>" data-fecha="<?php echo $asistencias->fecha;?>" data-fkclase="<?php echo $asistencias->fk_clase;?>"> <i class="fas fa-edit"></i> Editar </button>
-                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteDiaAsistencia" data-idreporte="<?php echo $reporte->id_reporte;?>" data-iddia="<?php echo $asistencias->id_dia;?>" data-fecha="<?php echo $asistencias->fecha;?>"> <i class="fas fa-trash"></i> Eliminar </button>
-                        </th>
-                      </tr>
-                    <?php endforeach; ?>
-                  </tbody>
-                </table>
-            <?php
-            }
-            ?>
-          </td>
-
-          <td>
-            <?php 
-            $tableActividades = 'EA_ACTIVIDAD';
-            $sql = "SELECT * FROM ".$tableActividades." WHERE fk_clase = :id";
-            $resultado = $base->prepare($sql);
-            $resultado->bindValue(":id", $reporte->fk_clase);
-            $resultado->execute();
-            $tuplas = $resultado->rowcount();
-            if($tuplas != 0) {
-              $arrayActividades = $resultado->fetchAll(PDO::FETCH_OBJ);
-            ?>
-              <div class="table-responsive">
-                <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th># referencia actividad</th>
-                      <th>Nombre</th>
-                      <th>Fecha entrega</th>
-                      <th>Acciones</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php foreach($arrayActividades as $actividades): ?>
-                      <tr>
-                        <td><?php echo $actividades->id_actividad; ?></td>
-                        <td><?php echo $actividades->nombre; ?></td>
-                        <td><?php echo $actividades->fecha; ?></td>
-                        <td>
-                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editActividad" data-idreporte="<?php echo $reporte->id_reporte;?>" data-idactividad="<?php echo $actividades->id_actividad;?>" data-fkclase="<?php echo $actividades->fk_clase;?>" data-nombre="<?php echo $actividades->nombre;?>" data-fecha="<?php echo $actividades->fecha;?>"> <i class="fas fa-edit"></i> Editar </button>
-                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteActividad" data-idreporte="<?php echo $reporte->id_reporte;?>" data-idactividad="<?php echo $actividades->id_actividad;?>" data-nombre="<?php echo $actividades->nombre;?>" data-fecha="<?php echo $actividades->fecha;?>"> <i class="fas fa-trash"></i> Eliminar </button>
-                        </td>
-                      </tr>
-                    <?php endforeach; ?>
-                  </tbody>
-                </table>
-              <?php 
-              }
-              ?>
-            </div>
-
-          </td>
-          <td>
-            <?php
-            $tableActividades = 'EA_EXAMEN';
-            $sql = "SELECT * FROM ".$tableActividades." WHERE fk_clase = :id";
-            $resultado = $base->prepare($sql);
-            $resultado->bindValue(":id", $reporte->fk_clase);
-            $resultado->execute();
-            $tuplas = $resultado->rowcount();
-            if($tuplas != 0) {
-              $arrayExamenes = $resultado->fetchAll(PDO::FETCH_OBJ);
-            ?>
-              <div class="table-responsive">
-                <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th># referencia examen</th>
-                      <th>Nombre</th>
-                      <th>Fecha aplicación</th>
-                      <th>Acciones</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php foreach($arrayExamenes as $examenes): ?>
-                      <tr>
-                        <td><?php echo $examenes->id_examen; ?></td>
-                        <td><?php echo $examenes->nombre; ?></td>
-                        <td><?php echo $examenes->fecha; ?></td>
-                        <td>
-                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editExamen" data-idreporte="<?php echo $reporte->id_reporte;?>" data-idexamen="<?php echo $examenes->id_examen;?>" data-fkclase="<?php echo $examenes->fk_clase;?>" data-nombre="<?php echo $examenes->nombre;?>" data-fecha="<?php echo $examenes->fecha;?>"> <i class="fas fa-edit"></i> Editar </button>
-                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteExamen" data-idreporte="<?php echo $reporte->id_reporte;?>" data-idexamen="<?php echo $examenes->id_examen;?>" data-nombre="<?php echo $examenes->nombre;?>"> <i class="fas fa-trash"></i> Eliminar </button>
-                        </td>
-                      </tr>
-                    <?php endforeach; ?>
-                  </tbody>
-                </table>
-              </div>
-            <?php
-            }
-            ?>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 </div>
 <?php
   }
+?>
+    <br><br>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th class="table-info" colspan="3">
+                    Detalles
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <?php
+                    $tableAsistencias = 'EA_DIA_CLASE';
+                    $sql = "SELECT * FROM ".$tableAsistencias." WHERE fk_clase = :id ORDER BY fecha ASC";
+                    $resultado = $base->prepare($sql);
+                    $resultado->bindValue(":id", $reporte->fk_clase);
+                    $resultado->execute();
+                    $tuplas = $resultado->rowcount();
+                    if($tuplas != 0) {
+                    $arrayAsistencias = $resultado->fetchAll(PDO::FETCH_OBJ);
+                    ?>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th># referencia asistencia</th>
+                                <th>Fecha</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach($arrayAsistencias as $asistencias): ?>
+                                <tr>
+                                    <td><?php echo $asistencias->id_dia; ?></td>
+                                    <td><?php echo $asistencias->fecha; ?></td>
+                                    <th>
+                                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editDiaAsistencia" data-idreporte="<?php echo $reporte->id_reporte;?>" data-iddia="<?php echo $asistencias->id_dia;?>" data-fecha="<?php echo $asistencias->fecha;?>" data-fkclase="<?php echo $asistencias->fk_clase;?>"> <i class="fas fa-edit"></i> Editar </button>
+                                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteDiaAsistencia" data-idreporte="<?php echo $reporte->id_reporte;?>" data-iddia="<?php echo $asistencias->id_dia;?>" data-fecha="<?php echo $asistencias->fecha;?>"> <i class="fas fa-trash"></i> Eliminar </button>
+                                    </th>
+                                </tr>
+                            <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                        <?php
+                        }
+                        ?>
+                </td>
+
+                <td>
+                    <?php
+                    $tableActividades = 'EA_ACTIVIDAD';
+                    $sql = "SELECT * FROM ".$tableActividades." WHERE fk_clase = :id";
+                    $resultado = $base->prepare($sql);
+                    $resultado->bindValue(":id", $reporte->fk_clase);
+                    $resultado->execute();
+                    $tuplas = $resultado->rowcount();
+                    if($tuplas != 0) {
+                    $arrayActividades = $resultado->fetchAll(PDO::FETCH_OBJ);
+                    ?>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th># referencia actividad</th>
+                                <th>Nombre</th>
+                                <th>Fecha entrega</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php foreach($arrayActividades as $actividades): ?>
+                                <tr>
+                                    <td><?php echo $actividades->id_actividad; ?></td>
+                                    <td><?php echo $actividades->nombre; ?></td>
+                                    <td><?php echo $actividades->fecha; ?></td>
+                                    <td>
+                                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editActividad" data-idreporte="<?php echo $reporte->id_reporte;?>" data-idactividad="<?php echo $actividades->id_actividad;?>" data-fkclase="<?php echo $actividades->fk_clase;?>" data-nombre="<?php echo $actividades->nombre;?>" data-fecha="<?php echo $actividades->fecha;?>"> <i class="fas fa-edit"></i> Editar </button>
+                                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteActividad" data-idreporte="<?php echo $reporte->id_reporte;?>" data-idactividad="<?php echo $actividades->id_actividad;?>" data-nombre="<?php echo $actividades->nombre;?>" data-fecha="<?php echo $actividades->fecha;?>"> <i class="fas fa-trash"></i> Eliminar </button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                        <?php
+                        }
+                        ?>
+                    </div>
+
+                </td>
+                <td>
+                    <?php
+                    $tableActividades = 'EA_EXAMEN';
+                    $sql = "SELECT * FROM ".$tableActividades." WHERE fk_clase = :id";
+                    $resultado = $base->prepare($sql);
+                    $resultado->bindValue(":id", $reporte->fk_clase);
+                    $resultado->execute();
+                    $tuplas = $resultado->rowcount();
+                    if($tuplas != 0) {
+                        $arrayExamenes = $resultado->fetchAll(PDO::FETCH_OBJ);
+                        ?>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th># referencia examen</th>
+                                    <th>Nombre</th>
+                                    <th>Fecha aplicación</th>
+                                    <th>Acciones</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php foreach($arrayExamenes as $examenes): ?>
+                                    <tr>
+                                        <td><?php echo $examenes->id_examen; ?></td>
+                                        <td><?php echo $examenes->nombre; ?></td>
+                                        <td><?php echo $examenes->fecha; ?></td>
+                                        <td>
+                                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editExamen" data-idreporte="<?php echo $reporte->id_reporte;?>" data-idexamen="<?php echo $examenes->id_examen;?>" data-fkclase="<?php echo $examenes->fk_clase;?>" data-nombre="<?php echo $examenes->nombre;?>" data-fecha="<?php echo $examenes->fecha;?>"> <i class="fas fa-edit"></i> Editar </button>
+                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteExamen" data-idreporte="<?php echo $reporte->id_reporte;?>" data-idexamen="<?php echo $examenes->id_examen;?>" data-nombre="<?php echo $examenes->nombre;?>"> <i class="fas fa-trash"></i> Eliminar </button>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+<?php
 }
 catch(Exception $e) {
   echo "Linea del error: ".$e->GetMessage();

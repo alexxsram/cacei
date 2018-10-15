@@ -14,7 +14,7 @@
     $( "#deleteAlumnoF" ).submit(function( event ) {
     			 $.ajax({
     					type: "POST",
-    					url: "model/delete_detalleReporte.php",
+    					url: "model/delete_Alumno.php",
               dataType: "HTML",
     					data: "id=" + $("#idAlumnoD").val()
     			}).done(function (echo){

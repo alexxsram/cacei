@@ -10,10 +10,21 @@ $fkAlumno = $_POST['fk_alumno'];
 $fkDia = $_POST['fk_dia'];
 
 try {
-    $sql = "INSERT INTO EA_ASISTENCIA (fk_alumno, fk_dia) VALUES (:fka, :fkd)";
+    $sql = "SELECT * FROM EA_ASISTENCIA WHERE fk_alumno = :fka AND fk_dia = :fkd";
     $resultado = $base->prepare($sql);
     $resultado->execute(array(":fka"=>$fkAlumno, ":fkd"=>$fkDia));
-    echo "1";
+
+    $hayTupla = $resultado->rowCount();
+
+    if($hayTupla == 0) {
+        $sql = "INSERT INTO EA_ASISTENCIA (fk_alumno, fk_dia) VALUES (:fka, :fkd)";
+        $resultado = $base->prepare($sql);
+        $resultado->execute(array(":fka" => $fkAlumno, ":fkd" => $fkDia));
+        echo "1";
+    }
+    else {
+        echo "2";
+    }
 } catch(Exception $e) {
     echo "Sucedio este error: ".$e->GetMessage();
 }

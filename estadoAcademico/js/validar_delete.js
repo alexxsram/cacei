@@ -1,29 +1,59 @@
-$('#deleteAlumno').on('show.bs.modal', function(event) {
-    // mensajeEdit.hide()
+$('#deleteReporte').on('show.bs.modal', function(event) {
+    mensajeEdit.hide()
     var button = $(event.relatedTarget)
     var modal = $(this)
-    var titulo = $("#h2Alumno")
-    var buttonD = $("#btnAlumno")
+    var reporteTitulo = $("#reporteTitulo")
+    reporteTitulo.html("Se eliminará el reporte: " + button.data('title'))
+    var buttonD = $("#btnAceptar")
     buttonD.show()
-    titulo.html("Se eliminara el Alumno: " + button.data('title'));
-    var idReporte = button.data('idreporte')
-    var idDetalle = button.data('iddetalle')
-    $("#idAlumnoD").val(idDetalle)
-    $("#idReporteD").val(idReporte)
+    $("#idReporteDel").val(button.data("idreporte"))
+    $("#deleteReporteF").submit(function(event) {
+        $.ajax( {
+            type: "POST",
+            url: "model/delete_reporte.php",
+            dataType: "HTML",
+            data: "id_reporte=" + $("#idReporteDel").val()
+        }).done(function(echo) {
+            if(echo == '1') {
+                mensajeInfo()
+                mensajeEdit.html("El reporte fue eliminado con éxito")
+                buttonD.hide()
+                $("#btnCerrar").html("Cerrar")
+                cargar()
+                mensajeEliminado()
+            } else {
+                mensajeAlerta()
+                mensajeEdit.html("El reporte no pudo ser eliminado");
+            }
+            mensajeEdit.slideDown(500);
+        });
+        event.preventDefault()
+    });
+});
 
+$('#deleteAlumno').on('show.bs.modal', function(event) {
+    mensajeEdit.hide()
+    var button = $(event.relatedTarget)
+    var modal = $(this)
+    var titulo = $("#alumnoTitulo")
+    titulo.html("Se eliminará al alumno: " + button.data('codigo') + " - " + button.data('nombre'));
+    var buttonD = $("#btnAceptarAl")
+    buttonD.show()
+    $("#idReporteDelAl").val(button.data('idreporte'))
+    $("#idAlumnoDelAl").val(button.data('codigo'))
     $( "#deleteAlumnoF" ).submit( function(event) {
         $.ajax( {
             type: "POST",
-            url: "model/delete_detalleReporte.php",
+            url: "model/delete_Alumno.php",
             dataType: "HTML",
-            data: "id=" + $("#idAlumnoD").val()
+            data: "codigo=" + $("#idAlumnoDelAl").val()
         }).done(function(echo) {
             if(echo == '1') {
                 mensajeInfo()
                 mensajeEdit.html("El alumno fue retirado del reporte con éxito")
                 buttonD.hide();
                 $("#btnAlumnoC").html("Cerrar")
-                cargarDetalle( $("#idReporteD").val() )
+                cargarDetalle( $("#idReporteDelAl").val() )
             } else {
                 mensajeAlerta()
                 mensajeEdit.html("Alumno no eliminado");
@@ -32,39 +62,6 @@ $('#deleteAlumno').on('show.bs.modal', function(event) {
         });
         event.preventDefault()
     });
-});
-
-$('#deleteReporte').on('show.bs.modal', function(event) {
-  mensajeEdit.hide()
-  var button = $(event.relatedTarget)
-  var modal = $(this)
-  var reporteTitulo = $("#reporteTitulo")
-  reporteTitulo.html("Se eliminará el reporte: " + button.data('title'))
-  var buttonD = $("#btnAceptar")
-  buttonD.show()
-  $("#idReporteDel").val(button.data("idreporte"))
-  $("#deleteReporteF").submit(function(event) {
-    $.ajax( {
-      type: "POST",
-      url: "model/delete_reporte.php",
-      dataType: "HTML",
-      data: "id_reporte=" + $("#idReporteDel").val()
-    }).done(function(echo) {
-      if(echo == '1') {
-        mensajeInfo()
-        mensajeEdit.html("El reporte fue eliminado con éxito")
-        buttonD.hide()
-        $("#btnCerrar").html("Cerrar")
-        cargar()
-        mensajeEliminado()
-      } else {
-        mensajeAlerta()
-        mensajeEdit.html("El reporte no pudo ser eliminado");
-      }
-      mensajeEdit.slideDown(500);
-    });
-    event.preventDefault()
-  });
 });
 
 $('#deleteDiaAsistencia').on('show.bs.modal', function(event) {

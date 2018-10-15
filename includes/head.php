@@ -1,4 +1,4 @@
-<!-- <?php include 'php/core/start_session.php'; ?> -->
+<?php include 'php/core/start_session.php'; ?>
 
 <head>
     <meta charset="utf-8">
