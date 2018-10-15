@@ -6,8 +6,7 @@ session_start();
 //Si lo está, definimos el botón de cerrar sesión y la duración de la sesión
 if(!isset($_SESSION['usuario']) and $_SESSION['estado'] != 'Autenticado') {
 	header('Location: index.php');
-} 
-else {
+} else {
 	$estado = $_SESSION['usuario'];
 	require('../cacei/model/sesiones.php');
 }

@@ -827,6 +827,75 @@ $('#editExamen').on('show.bs.modal', function(event) {
     mensajeEdit.hide()
 });
 
+//Validación del formulario para tomar asistencia con el termino "takeDiaAsistencia"
+$('#takeAsistencia').on('show.bs.modal', function(event) {
+    var button = $(event.relatedTarget) // Botón que activó el modal
+    var modal = $(this)
+
+    var idReporte = button.data('idreporte');
+    $('#idReporteAsi').val(idReporte)
+
+    var fkClase = button.data('fkclase');
+
+    ejecutarSelectAjax('POST', 'get_Asistencias.php', 'fk_clase='+fkClase, '#selectFechaAsi');
+    ejecutarSelectAjax('POST', 'get_Alumnos.php', 'fk_clase='+fkClase, '#selectAlumnoAsi');
+
+    $('#takeAsistenciaF').validate( {
+        rules: {
+            selectFechaAsi: {
+                required: true
+            },
+            selectAlumnoAsi: {
+                required: true
+            }
+        },
+        messages: {
+            selectFechaAsi: {
+                required: "Selecciona el día de asistencia"
+            },
+            selectAlumnoAsi: {
+                required: "Selecciona al alumno"
+            }
+        },
+        submitHandler: function(form) {
+            $.ajax( {
+                url: "model/take_Asistencia.php",
+                type: "POST",
+                dataType: "HTML",
+                data: "fk_dia=" + $("#selectFechaAsi").val() + "&fk_alumno=" + $("#selectAlumnoAsi").val()
+            }).done(function(echo) {
+                if (echo == "1") {
+                    mensajeInfo()
+                    mensajeEdit.html("La asistencia fue tomada al alumno");
+                    limpiarExamenE()
+                    cargarDetalle( $("#idReporteAsi").val() )
+                } else {
+                    mensajeAlerta()
+                    mensajeEdit.html("Hubo un error al tomar la asistencia");
+                }
+                mensajeEdit.slideDown(500);
+            });
+        },
+        errorElement: "em",
+        errorPlacement: function(error, element) {
+            // Add the `help-block` class to the error element
+            error.addClass("invalid-feedback");
+
+            if(element.prop("type") === "checkbox") {
+                error.insertAfter(element.parent("label"));
+            } else {
+                error.insertAfter(element);
+            }
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).addClass("is-invalid").removeClass("is-valid");
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).addClass("is-valid").removeClass("is-invalid");
+        }
+    });
+});
+
 function revisarCheck() {
     if(!$('#selectA').prop('checked')) {
         $('#selectA').val(" ");
@@ -870,7 +939,7 @@ function limpiarPass() {
 
 function cargarTablaS(comp) {
     var idReporte = comp.id;
-    $("#reportesContainer").load("view/detalle_table.php?id=" + idReporte)
+    $("#reportesContainer").load("view/detalle_table.php?id_reporte=" + idReporte)
 }
 
 function limpiarReporte() {
@@ -932,9 +1001,21 @@ function limpiarExamenE() {
 }
 
 function cargarDetalle(idReporte) {
-    $("#reportesContainer").load("view/detalle_table.php?id=" + idReporte)
+    $("#reportesContainer").load("view/detalle_table.php?id_reporte=" + idReporte)
 }
 
 function cargar() {
     $('#sidenavD').load('view/dinamic_sidenav.php');
+}
+
+function ejecutarSelectAjax(metodo, archivoPHP, datos, idEtiqueta) {
+    $.ajax({
+        type: metodo,
+        url: "model/" + archivoPHP,
+        dataType: "HTML",
+        data: datos,
+        success: function(response) {
+            $(idEtiqueta).html(response).fadeIn();
+        }
+    });
 }

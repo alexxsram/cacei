@@ -9,7 +9,7 @@ try{
   $sql .= " WHERE EAR.id_reporte = :id_reporte ORDER BY EAR.id_reporte ASC";
   $resultado = $base->prepare($sql);
   $codigoProfesor = htmlentities(addslashes($_SESSION['usuario']));
-  $idReporte = htmlentities(addslashes($_GET['id']));
+  $idReporte = htmlentities(addslashes($_GET['id_reporte']));
   $resultado->bindValue(":id_profesor", $codigoProfesor);
   $resultado->bindValue(":id_reporte", $idReporte);
   $resultado->execute();
@@ -18,7 +18,8 @@ try{
   require_once '../model/clsMateriaProfesor.php';
   require_once '../model/clsMateria.php';
   $nrc = ProfesorMateria::buscarPorId($reporte->fk_clase);
-  $materia = Materia::buscarPorId($nrc->materia); 
+  $materia = Materia::buscarPorId($nrc->materia);
+
 ?>
 
 <div class="container-fluid" style="margin-top: 40px;">
@@ -43,7 +44,7 @@ try{
         Opciones para alumno
       </button>
       <div class="dropdown-menu">
-        <a class="dropdown-item" data-toggle="modal" href="#takeAsistencia" onclick="">Tomar asistencia</a>
+        <a class="dropdown-item" data-toggle="modal" href="#takeAsistencia" data-idreporte="<?php echo $reporte->id_reporte; ?>" data-fkclase="<?php echo $reporte->fk_clase;?>">Tomar asistencia</a>
         <a class="dropdown-item" data-toggle="modal" href="#takeActividad">Calificar actividad</a>
         <a class="dropdown-item" data-toggle="modal" href="#takeExamen">Calificar examen</a>
       </div>

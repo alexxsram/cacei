@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="216904d2-63ee-43ee-9869-b51643a2203a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cacei/examples/EstadoAcademicoReporteNew.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cacei/examples/ESTADO_ACADEMICO_reporte.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/estadoAcademico/js/validar_formularios.js" beforeDir="false" afterPath="$PROJECT_DIR$/estadoAcademico/js/validar_formularios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estadoAcademico/principal.php" beforeDir="false" afterPath="$PROJECT_DIR$/estadoAcademico/principal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estadoAcademico/view/add_modal_reporte.php" beforeDir="false" afterPath="$PROJECT_DIR$/estadoAcademico/view/add_modal_reporte.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estadoAcademico/view/detalle_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/estadoAcademico/view/detalle_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,82 +28,121 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="4" />
-          <entry key="php" value="28" />
+          <entry key="js" value="5" />
+          <entry key="php" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="4" />
-          <entry key="PHP" value="28" />
+          <entry key="JavaScript" value="5" />
+          <entry key="PHP" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="53" />
-          <entry key="js" value="2804" />
-          <entry key="php" value="2712" />
+          <entry key="js" value="4235" />
+          <entry key="php" value="4387" />
           <entry key="txt" value="130" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="2803" />
-          <entry key="PHP" value="2712" />
+          <entry key="JavaScript" value="4234" />
+          <entry key="PHP" value="4373" />
           <entry key="PLAIN_TEXT" value="183" />
+          <entry key="SQL" value="14" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/estadoAcademico/view/detalle_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="149" column="24" lean-forward="true" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
+            <state relative-caret-position="272">
+              <caret line="46" column="128" selection-start-line="46" selection-start-column="128" selection-end-line="46" selection-end-column="128" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cacei/examples/EstadoAcademicoReporteNew.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/estadoAcademico/view/add_modal_reporte.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="503">
+              <caret line="417" column="56" selection-start-line="417" selection-start-column="56" selection-end-line="417" selection-end-column="56" />
               <folding>
-                <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#!!top" />
+                <element signature="n#div#1;n#!!top" />
+                <element signature="n#div#2;n#!!top" />
+                <element signature="n#div#3;n#!!top" />
+                <element signature="n#div#4;n#!!top" />
+                <element signature="n#div#6;n#!!top" />
+                <element signature="n#div#7;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cacei/examples/ESTADO_ACADEMICO_reporteOld.php">
+        <entry file="file://$PROJECT_DIR$/estadoAcademico/js/validar_formularios.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <state relative-caret-position="291">
+              <caret line="855" column="27" lean-forward="true" selection-start-line="855" selection-start-column="27" selection-end-line="855" selection-end-column="27" />
               <folding>
-                <element signature="e#381#389#0" expanded="true" />
+                <element signature="n#!!block;n#mensajeAlerta#0" />
+                <element signature="n#!!block;n#mensajeInfo#0" />
+                <element signature="e#489#2685#0" />
+                <element signature="e#2816#6373#0" />
+                <element signature="e#6505#10455#0" />
+                <element signature="e#10589#12364#0" />
+                <element signature="e#12497#14687#0" />
+                <element signature="e#14976#17495#0" />
+                <element signature="e#17651#19851#0" />
+                <element signature="e#19991#22484#0" />
+                <element signature="e#22625#25089#0" />
+                <element signature="e#25220#27667#0" />
+                <element signature="e#27799#30237#0" />
+                <element signature="n#!!block;n#revisarCheck#0" />
+                <element signature="n#!!block;n#revisarCheckE#0" />
+                <element signature="n#!!block;n#limpiarPass#0" />
+                <element signature="n#!!block;n#cargarTablaS#0" />
+                <element signature="n#!!block;n#limpiarReporte#0" />
+                <element signature="n#!!block;n#limpiarAlumno#0" />
+                <element signature="n#!!block;n#limpiarDiaAsistencia#0" />
+                <element signature="n#!!block;n#limpiarActividad#0" />
+                <element signature="n#!!block;n#limpiarExamen#0" />
+                <element signature="n#!!block;n#limpiarReporteE#0" />
+                <element signature="n#!!block;n#limpiarAlumnoE#0" />
+                <element signature="n#!!block;n#limpiarDiaAsistenciaE#0" />
+                <element signature="n#!!block;n#limpiarActividadE#0" />
+                <element signature="n#!!block;n#limpiarExamenE#0" />
+                <element signature="n#!!block;n#cargarDetalle#0" />
+                <element signature="n#!!block;n#cargar#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cacei/examples/tcpdf_include.php">
+        <entry file="file://$PROJECT_DIR$/estadoAcademico/model/get_Asistencias.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-              <folding>
-                <element signature="e#6#69#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/estadoAcademico/model/get_Alumnos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -113,6 +153,7 @@
     <findStrings>
       <find>editPass</find>
       <find>$_GET['materia']</find>
+      <find>cargarTablas</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,13 +172,19 @@
         <option value="$PROJECT_DIR$/estadoAcademico/view/delete_modal_reporte.php" />
         <option value="$PROJECT_DIR$/estadoAcademico/model/delete_Examen.php" />
         <option value="$PROJECT_DIR$/estadoAcademico/js/validar_delete.js" />
-        <option value="$PROJECT_DIR$/estadoAcademico/view/add_modal_reporte.php" />
-        <option value="$PROJECT_DIR$/estadoAcademico/js/validar_formularios.js" />
         <option value="$PROJECT_DIR$/estadoAcademico/view/edit_modal_reporte.php" />
-        <option value="$PROJECT_DIR$/cacei/examples/EstadoAcademicoReporteNew.php" />
         <option value="$PROJECT_DIR$/cacei/examples/ESTADO_ACADEMICO_reporteOld.php" />
         <option value="$PROJECT_DIR$/cacei/examples/ESTADO_ACADEMICO_reporte.php" />
+        <option value="$PROJECT_DIR$/cacei/examples/EstadoAcademicoReporteNew.php" />
+        <option value="$PROJECT_DIR$/estadoAcademico/model/clsDiasAsistencia.php" />
+        <option value="$PROJECT_DIR$/estadoAcademico/view/dinamic_sidenav.php" />
+        <option value="$PROJECT_DIR$/estadoAcademico/principal.php" />
+        <option value="$PROJECT_DIR$/estadoAcademico/model/clsMateriaProfesor.php" />
+        <option value="$PROJECT_DIR$/estadoAcademico/model/get_Asistencias.php" />
+        <option value="$PROJECT_DIR$/estadoAcademico/model/get_Alumnos.php" />
         <option value="$PROJECT_DIR$/estadoAcademico/view/detalle_table.php" />
+        <option value="$PROJECT_DIR$/estadoAcademico/js/validar_formularios.js" />
+        <option value="$PROJECT_DIR$/estadoAcademico/view/add_modal_reporte.php" />
       </list>
     </option>
   </component>
@@ -148,10 +195,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="787" />
-    <option name="height" value="735" />
+    <option name="x" value="-7" />
+    <option name="width" value="794" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -169,20 +215,13 @@
             <path>
               <item name="cacei" type="b2602c69:ProjectViewProjectNode" />
               <item name="cacei" type="462c0819:PsiDirectoryNode" />
-              <item name="cacei" type="462c0819:PsiDirectoryNode" />
+              <item name="estadoAcademico" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cacei" type="b2602c69:ProjectViewProjectNode" />
               <item name="cacei" type="462c0819:PsiDirectoryNode" />
-              <item name="cacei" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cacei" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cacei" type="462c0819:PsiDirectoryNode" />
-              <item name="cacei" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="estadoAcademico" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -222,7 +261,7 @@
       <workItem from="1538276486584" duration="5308000" />
       <workItem from="1539403651327" duration="9502000" />
       <workItem from="1539492909907" duration="5056000" />
-      <workItem from="1539559874655" duration="7182000" />
+      <workItem from="1539559874655" duration="19911000" />
     </task>
     <task id="LOCAL-00001" summary="Implementación de botones eliminar en asistencias, actividades y examenes, falta implementar los modal y sus funciones">
       <created>1539414757359</created>
@@ -235,7 +274,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27048000" />
+    <option name="totallyTimeSpent" value="39777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
@@ -245,7 +284,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49920633" weight="0.32923076" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -255,7 +294,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295082" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" visible="true" weight="0.32923076" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50079364" side_tool="true" weight="0.3276923" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -277,7 +316,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/estadoAcademico/view/detalle_table.php</url>
-          <line>371</line>
+          <line>372</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -365,43 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/estadoAcademico/js/validar_formularios.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="928" column="27" selection-start-line="928" selection-start-column="27" selection-end-line="928" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!block;n#mensajeAlerta#0" />
-            <element signature="n#!!block;n#mensajeInfo#0" />
-            <element signature="e#489#2685#0" />
-            <element signature="e#2816#6373#0" />
-            <element signature="e#6505#10453#0" />
-            <element signature="e#10587#12362#0" />
-            <element signature="e#12495#14685#0" />
-            <element signature="e#14974#17486#0" />
-            <element signature="e#17642#19865#0" />
-            <element signature="e#20005#22495#0" />
-            <element signature="e#22636#25127#0" />
-            <element signature="e#25258#27705#0" />
-            <element signature="e#27837#30305#0" />
-            <element signature="n#!!block;n#revisarCheck#0" />
-            <element signature="n#!!block;n#revisarCheckE#0" />
-            <element signature="n#!!block;n#limpiarPass#0" />
-            <element signature="n#!!block;n#cargarTablaS#0" />
-            <element signature="n#!!block;n#limpiarReporte#0" />
-            <element signature="n#!!block;n#limpiarAlumno#0" />
-            <element signature="n#!!block;n#limpiarDiaAsistencia#0" />
-            <element signature="n#!!block;n#limpiarActividad#0" />
-            <element signature="n#!!block;n#limpiarExamenF#0" />
-            <element signature="n#!!block;n#limpiarReporteE#0" />
-            <element signature="n#!!block;n#limpiarAlumnoE#0" />
-            <element signature="n#!!block;n#limpiarDiaAsistenciaF#1" />
-            <element signature="n#!!block;n#limpiarActividadE#0" />
-            <element signature="n#!!block;n#cargarDetalle#0" />
-            <element signature="n#!!block;n#cargar#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/estadoAcademico/view/edit_modal_reporte.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -414,32 +416,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/estadoAcademico/view/add_modal_reporte.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="285" column="6" selection-start-line="285" selection-start-column="6" selection-end-line="285" selection-end-column="6" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-            <element signature="n#div#1;n#!!top" />
-            <element signature="n#div#2;n#!!top" />
-            <element signature="n#div#4;n#!!top" />
-            <element signature="n#div#5;n#!!top" />
-            <element signature="n#div#6;n#!!top" />
-            <element signature="n#div#7;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cacei/examples/reporte2_c.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cacei/examples/server.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-139" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cacei/examples/tcpdf_include.php">
@@ -469,11 +450,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cacei/examples/server.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/cacei/examples/EstadoAcademicoReporteNew.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="78">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
           <folding>
+            <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
@@ -484,10 +469,109 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/estadoAcademico/model/add_Examen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estadoAcademico/view/dinamic_sidenav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estadoAcademico/principal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estadoAcademico/model/clsMateriaProfesor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estadoAcademico/model/get_Alumnos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/estadoAcademico/view/detalle_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="149" column="24" lean-forward="true" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
+        <state relative-caret-position="272">
+          <caret line="46" column="128" selection-start-line="46" selection-start-column="128" selection-end-line="46" selection-end-column="128" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estadoAcademico/model/get_Asistencias.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estadoAcademico/js/validar_formularios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="855" column="27" lean-forward="true" selection-start-line="855" selection-start-column="27" selection-end-line="855" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!block;n#mensajeAlerta#0" />
+            <element signature="n#!!block;n#mensajeInfo#0" />
+            <element signature="e#489#2685#0" />
+            <element signature="e#2816#6373#0" />
+            <element signature="e#6505#10455#0" />
+            <element signature="e#10589#12364#0" />
+            <element signature="e#12497#14687#0" />
+            <element signature="e#14976#17495#0" />
+            <element signature="e#17651#19851#0" />
+            <element signature="e#19991#22484#0" />
+            <element signature="e#22625#25089#0" />
+            <element signature="e#25220#27667#0" />
+            <element signature="e#27799#30237#0" />
+            <element signature="n#!!block;n#revisarCheck#0" />
+            <element signature="n#!!block;n#revisarCheckE#0" />
+            <element signature="n#!!block;n#limpiarPass#0" />
+            <element signature="n#!!block;n#cargarTablaS#0" />
+            <element signature="n#!!block;n#limpiarReporte#0" />
+            <element signature="n#!!block;n#limpiarAlumno#0" />
+            <element signature="n#!!block;n#limpiarDiaAsistencia#0" />
+            <element signature="n#!!block;n#limpiarActividad#0" />
+            <element signature="n#!!block;n#limpiarExamen#0" />
+            <element signature="n#!!block;n#limpiarReporteE#0" />
+            <element signature="n#!!block;n#limpiarAlumnoE#0" />
+            <element signature="n#!!block;n#limpiarDiaAsistenciaE#0" />
+            <element signature="n#!!block;n#limpiarActividadE#0" />
+            <element signature="n#!!block;n#limpiarExamenE#0" />
+            <element signature="n#!!block;n#cargarDetalle#0" />
+            <element signature="n#!!block;n#cargar#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estadoAcademico/view/add_modal_reporte.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="417" column="56" selection-start-line="417" selection-start-column="56" selection-end-line="417" selection-end-column="56" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="n#div#1;n#!!top" />
+            <element signature="n#div#2;n#!!top" />
+            <element signature="n#div#3;n#!!top" />
+            <element signature="n#div#4;n#!!top" />
+            <element signature="n#div#6;n#!!top" />
+            <element signature="n#div#7;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

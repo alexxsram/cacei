@@ -400,19 +400,22 @@
                 </button>
             </div>
 
-            <form id="takeAsistanceF" action="POST">
+            <form id="takeAsistenciaF" action="POST">
                 <div class="modal-body">
+
+                    <div class="form-group">
+                        <input class="form-control" type="hidden" id="idReporteAsi" name="idReporteAsi" disabled>
+                    </div>
                     
                     <div class="form-group">
-                        <label class="col-form-label" for="selectFecha">Fecha de asistencia: </label>
+                        <label class="col-form-label" for="selectFechaAsi">Fecha de asistencia: </label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
                                     <i class="fas fa-calendar"></i>
                                 </div>
                             </div>
-                            <select name="selectFecha" id="selectFecha" class="custom-select">
-                                <option value=''> Selecciona una fecha </option>
+                            <select name="selectFechaAsi" id="selectFechaAsi" class="custom-select">
                             </select>
                         </div>
                     </div>
