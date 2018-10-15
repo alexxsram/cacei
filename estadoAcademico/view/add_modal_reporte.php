@@ -402,7 +402,6 @@
 
             <form id="takeAsistenciaF" action="POST">
                 <div class="modal-body">
-
                     <div class="form-group">
                         <input class="form-control" type="hidden" id="idReporteAsi" name="idReporteAsi" disabled>
                     </div>
@@ -461,15 +460,18 @@
             <form id="takeActividadF" action="POST">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label class="col-form-label" for="selectActividad">Nombre de la actividad: </label>
+                        <input class="form-control" type="hidden" id="idReporteAct" name="idReporteAsi" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="selectActividadAct">Nombre de la actividad: </label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
                                     <i class="fas fa-book-open"></i>
                                 </div>
                             </div>
-                            <select name="selectActividad" id="selectActividad" class="custom-select">
-                                <option value=''> Selecciona una actividad </option>
+                            <select name="selectActividadAct" id="selectActividadAct" class="custom-select">
                             </select>
                         </div>
                     </div>
@@ -483,7 +485,6 @@
                                 </div>
                             </div>
                             <select name="selectAlumnoAct" id="selectAlumnoAct" class="custom-select">
-                                <option value=''> Selecciona un alumno </option>
                             </select>
                         </div>
                     </div>
@@ -527,14 +528,18 @@
             <form id="takeExamenF" action="POST">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label class="col-form-label" for="selectExamen">Nombre del examen: </label>
+                        <input class="form-control" type="hidden" id="idReporteExa" name="idReporteExa" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="selectExamenExa">Nombre del examen: </label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
                                     <i class="fas fa-file-alt"></i>
                                 </div>
                             </div>
-                            <select name="selectExamen" id="selectExamen" class="custom-select">
+                            <select name="selectExamenExa" id="selectExamenExa" class="custom-select">
                                 <option value=''> Selecciona un examen </option>
                             </select>
                         </div>

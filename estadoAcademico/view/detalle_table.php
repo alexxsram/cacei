@@ -44,9 +44,9 @@ try{
         Opciones para alumno
       </button>
       <div class="dropdown-menu">
-        <a class="dropdown-item" data-toggle="modal" href="#takeAsistencia" data-idreporte="<?php echo $reporte->id_reporte; ?>" data-fkclase="<?php echo $reporte->fk_clase;?>">Tomar asistencia</a>
-        <a class="dropdown-item" data-toggle="modal" href="#takeActividad">Calificar actividad</a>
-        <a class="dropdown-item" data-toggle="modal" href="#takeExamen">Calificar examen</a>
+        <a class="dropdown-item" data-toggle="modal" href="#takeAsistencia" data-idreporte="<?php echo $reporte->id_reporte;?>" data-fkclase="<?php echo $reporte->fk_clase;?>">Tomar asistencia</a>
+        <a class="dropdown-item" data-toggle="modal" href="#takeActividad" data-idreporte="<?php echo $reporte->id_reporte;?>" data-fkclase="<?php echo $reporte->fk_clase;?>">Calificar actividad</a>
+        <a class="dropdown-item" data-toggle="modal" href="#takeExamen" data-idreporte="<?php echo $reporte->id_reporte;?>" data-fkclase="<?php echo $reporte->fk_clase;?>">Calificar examen</a>
       </div>
     </div>
 
