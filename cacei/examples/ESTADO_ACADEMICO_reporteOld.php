@@ -1,12 +1,12 @@
 <?php
 session_start();
-
 if(!isset($_SESSION['usuario']) and $_SESSION['estado'] != 'Autenticado') {
 	header('Location: ../index.php');
 } else {
 	$estado = $_SESSION['usuario'];
 	require('../model/sesiones.php');
 }
+
 $idReporte = $_GET['id'];
 
 setlocale("es_MX");

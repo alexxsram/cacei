@@ -54,10 +54,11 @@ try{
         Acciones al reporte <span class="caret"></span>
       </button>
       <div class="dropdown-menu" role="menu">
-        <a class="dropdown-item" data-toggle="modal" href="#editReporte" data-materia="<?php echo $materia->nombre?>" data-idreporte="<?php echo $reporte->id_reporte?>" data-seccion="<?php echo $nrc->seccion?>">Editar</a>
-        <a class="dropdown-item" data-toggle="modal" href="#deleteReporte" data-idreporte="<?php echo $reporte->id_reporte?>" data-title="<?php echo $materia->nombre . ' (' . $nrc->seccion .')' ?>">Eliminar</a>
+        <a class="dropdown-item" data-toggle="modal" href="#editReporte" data-materia="<?php echo $materia->nombre;?>" data-idreporte="<?php echo $reporte->id_reporte;?>" data-seccion="<?php echo $nrc->seccion;?>">Editar</a>
+        <a class="dropdown-item" data-toggle="modal" href="#deleteReporte" data-idreporte="<?php echo $reporte->id_reporte;?>" data-title="<?php echo $materia->nombre . ' (' . $nrc->seccion .')';?>">Eliminar</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="../cacei/examples/ESTADO_ACADEMICO_reporte.php?materia=<?php echo $materia->nombre?>&id=<?php echo $reporte->id_reporte?>&seccion=<?php echo $nrc->seccion?>" target="_blank">Generar PDF</a>
+        <!--<a class="dropdown-item" href="../cacei/examples/ESTADO_ACADEMICO_reporte.php?materia=<?php echo $materia->nombre;?>&id=<?php echo $reporte->id_reporte;?>&seccion=<?php echo $nrc->seccion;?>" target="_blank">Generar PDF</a>-->
+        <a class="dropdown-item" href="../cacei/examples/EstadoAcademicoReporteNew.php?id_reporte=<?php echo $reporte->id_reporte;?>" target="_blank">Generar PDF</a>
       </div>
     </div>
   </div>
@@ -66,8 +67,8 @@ try{
     <table class="table table-hover table-bordered table-striped">
       <tbody>
         <tr class="table-info">
-          <td>Materia: <?php echo $materia->nombre?> </td>
-          <td>Sección: <?php echo $nrc->seccion?></td>
+          <td>Materia: <?php echo $materia->nombre;?> </td>
+          <td>Sección: <?php echo $nrc->seccion;?></td>
         </tr>
       </tbody>
     </table>
@@ -98,7 +99,7 @@ try{
     $arrayDatos = $resultado->fetchAll(PDO::FETCH_OBJ);
   ?>
 
-  <div class="table-responsive" id="Dtable<?php echo $reporte->id_reporte?>">
+  <div class="table-responsive" id="Dtable<?php echo $reporte->id_reporte;?>">
     <table class="table table-hover table-bordered table-stripped">
       <thead>
         <tr class="table-warning">
@@ -126,7 +127,7 @@ try{
 						$arrayAsiAlumno = $resultado->fetchAll(PDO::FETCH_OBJ);
             ?>
 
-            <b style="font-size:7;">Nombre alumno: <?php echo $detalleReporte->nombre ?></b>
+            <b style="font-size:7;">Nombre alumno: <?php echo $detalleReporte->nombre;?></b>
             <div class="table-responsive">
               <table class="table table-bordered table-hover" cellspacing="0" cellpadding="4">
                 <thead>
