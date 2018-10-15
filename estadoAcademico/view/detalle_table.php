@@ -216,7 +216,7 @@ try{
                 </thead>
                 <tbody>
                   <tr>
-                    <?php foreach($arrayActAlumno as $actividades): ?>
+                    <?php foreach($arrayExaAlumno as $examenes): ?>
                     <td style="font-size:8;" width="14.4" height="5">
                       <?php echo $examenes->calificacion; ?>
                     </td>

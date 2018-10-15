@@ -764,7 +764,74 @@ $('#takeActividad').on('show.bs.modal', function(event) {
 
     var fkClase = button.data('fkclase');
 
+    ejecutarSelectAjax('POST', 'get_Actividades.php', 'fk_clase='+fkClase, '#selectActividadAct');
+    ejecutarSelectAjax('POST', 'get_Alumnos.php', 'fk_clase='+fkClase, '#selectAlumnoAct');
 
+    $('#takeActividadF').validate( {
+        rules: {
+            selectActividadAct: {
+                required: true
+            },
+            selectAlumnoAct: {
+                required: true
+            },
+            calificacionAct: {
+                required: true
+            }
+        },
+        messages: {
+            selectActividadAct: {
+                required: "Selecciona la actividad"
+            },
+            selectAlumnoAct: {
+                required: "Selecciona al alumno"
+            },
+            calificacionAct: {
+                required: "Ingresa la calificación"
+            }
+        },
+        submitHandler: function(form) {
+            $.ajax( {
+                url: "model/take_Actividad.php",
+                type: "POST",
+                dataType: "HTML",
+                data: "fk_actividad=" + $("#selectActividadAct").val() + "&fk_alumno=" + $("#selectAlumnoAct").val() + "&calificacion=" + $("#calificacionAct").val()
+            }).done(function(echo) {
+                if (echo == "1") {
+                    mensajeInfo()
+                    mensajeEdit.html("La actividad fue calificada al alumno");
+                    limpiarExamenE()
+                    cargarDetalle( $("#idReporteAct").val() )
+                } else if (echo == "2") {
+                    mensajeInfo()
+                    mensajeEdit.html("Se actualizo la calificación de la actividad al alumno");
+                    limpiarExamenE()
+                    cargarDetalle( $("#idReporteAct").val() )
+                } else {
+                    mensajeAlerta()
+                    mensajeEdit.html("Hubo un error al calificar la actividad");
+                }
+                mensajeEdit.slideDown(500);
+            });
+        },
+        errorElement: "em",
+        errorPlacement: function(error, element) {
+            // Add the `help-block` class to the error element
+            error.addClass("invalid-feedback");
+
+            if(element.prop("type") === "checkbox") {
+                error.insertAfter(element.parent("label"));
+            } else {
+                error.insertAfter(element);
+            }
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).addClass("is-invalid").removeClass("is-valid");
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).addClass("is-valid").removeClass("is-invalid");
+        }
+    });
 });
 
 
@@ -1030,6 +1097,7 @@ function ejecutarSelectAjax(metodo, archivoPHP, datos, idEtiqueta) {
         dataType: "HTML",
         data: datos,
         success: function(response) {
+            // alert(response);
             $(idEtiqueta).html(response).fadeIn();
         }
     });
