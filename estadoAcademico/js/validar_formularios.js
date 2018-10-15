@@ -582,7 +582,7 @@ $('#takeAsistencia').on('show.bs.modal', function(event) {
                 if (echo == "1") {
                     mensajeInfo()
                     mensajeEdit.html("La asistencia fue tomada al alumno");
-                    limpiarExamenE()
+                    limpiarTomaAsistencia()
                     cargarDetalle( $("#idReporteAsi").val() )
                 } else {
                     mensajeAlerta()
@@ -800,12 +800,12 @@ $('#takeActividad').on('show.bs.modal', function(event) {
                 if (echo == "1") {
                     mensajeInfo()
                     mensajeEdit.html("La actividad fue calificada al alumno");
-                    limpiarExamenE()
+                    limpiarCalificacionActividad()
                     cargarDetalle( $("#idReporteAct").val() )
                 } else if (echo == "2") {
                     mensajeInfo()
                     mensajeEdit.html("Se actualizo la calificación de la actividad al alumno");
-                    limpiarExamenE()
+                    limpiarCalificacionActividad()
                     cargarDetalle( $("#idReporteAct").val() )
                 } else {
                     mensajeAlerta()
@@ -1022,12 +1022,12 @@ $('#takeActividad').on('show.bs.modal', function(event) {
                 if (echo == "1") {
                     mensajeInfo()
                     mensajeEdit.html("El examen fue calificado al alumno");
-                    limpiarExamenE()
+                    limpiarCalificacionExamen()
                     cargarDetalle( $("#idReporteExa").val() )
                 } else if (echo == "2") {
                     mensajeInfo()
                     mensajeEdit.html("Se actualizo la calificación del examen al alumno");
-                    limpiarExamenE()
+                    limpiarCalificacionExamen()
                     cargarDetalle( $("#idReporteExa").val() )
                 } else {
                     mensajeAlerta()
@@ -1158,6 +1158,23 @@ function limpiarActividadE() {
 function limpiarExamenE() {
     $("#nombreExE").val("");
     $("#fechaExE").val("");
+}
+
+function limpiarTomaAsistencia() {
+    $("#selectFechaAsi").val("");
+    $("#selectAlumnoAsi").val("");
+}
+
+function limpiarCalificacionActividad() {
+    $("#selectActividadAct").val("")
+    $("#selectAlumnoAct").val("")
+    $("#calificacionAct").val("")
+}
+
+function limpiarCalificacionExamen() {
+    $("#selectExamenExa").val("")
+    $("#selectAlumnoExa").val("")
+    $("#calificacionExa").val("")
 }
 
 function cargarDetalle(idReporte) {
