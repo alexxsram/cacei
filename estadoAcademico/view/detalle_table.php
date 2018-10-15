@@ -263,7 +263,7 @@ try{
           <td>
             <?php
             $tableAsistencias = 'EA_DIA_CLASE';
-            $sql = "SELECT * FROM ".$tableAsistencias." WHERE fk_clase = :id";
+            $sql = "SELECT * FROM ".$tableAsistencias." WHERE fk_clase = :id ORDER BY fecha ASC";
             $resultado = $base->prepare($sql);
             $resultado->bindValue(":id", $reporte->fk_clase);
             $resultado->execute();

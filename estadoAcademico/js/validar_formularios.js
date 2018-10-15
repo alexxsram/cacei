@@ -258,7 +258,7 @@ $('#editAlumno').on('show.bs.modal', function(event) {
                     mensajeInfo()
                     mensajeEdit.html("El alumno ha sido editado en el reporte")
                     limpiarAlumnoE()
-                    cargarDetalle($("#idReporteE").val())
+                    cargarDetalle( $("#idReporteE").val() )
                 }
                 else if(echo == '2') {
                     mensajeAlerta()
@@ -445,7 +445,7 @@ $('#addDiaAsistencia').on('show.bs.modal', function(event) {
                 if(echo == "1") {
                     mensajeInfo()
                     mensajeEdit.html("El día de asistencia ha sido agregado")
-                    limpiarAlumno()
+                    limpiarDiaAsistencia()
                     cargarDetalle($("#idReporteAs").val())
                 }
                 else if(echo == '2') {
@@ -512,8 +512,7 @@ $('#editDiaAsistencia').on('show.bs.modal', function(event) {
                 if (echo == "1") {
                     mensajeInfo()
                     mensajeEdit.html("El día de asistencia se ha editado con éxito");
-                    limpiarReporteE()
-                    cargar()
+                    limpiarDiaAsistenciaE()
                     cargarDetalle( $("#idReporteAsE").val() )
                 } else {
                     mensajeAlerta()
@@ -582,7 +581,7 @@ $('#addActividad').on('show.bs.modal', function(event) {
                 if(echo == "1") {
                     mensajeInfo()
                     mensajeEdit.html("La actividad ha sido agregada")
-                    limpiarAlumno()
+                    limpiarActividad()
                     cargarDetalle($("#idReporteAc").val())
                 }
                 else if(echo == '2') {
@@ -656,8 +655,7 @@ $('#editActividad').on('show.bs.modal', function(event) {
                 if (echo == "1") {
                     mensajeInfo()
                     mensajeEdit.html("La actividad se ha editado con éxito");
-                    limpiarReporteE()
-                    cargar()
+                    limpiarActividadE()
                     cargarDetalle( $("#idReporteAcE").val() )
                 } else {
                     mensajeAlerta()
@@ -726,7 +724,7 @@ $('#addExamen').on('show.bs.modal', function(event) {
                 if(echo == "1") {
                     mensajeInfo()
                     mensajeEdit.html("El examen ha sido agregado")
-                    limpiarAlumno()
+                    limpiarExamen()
                     cargarDetalle($("#idReporteEx").val())
                 }
                 else if(echo == '2') {
@@ -799,8 +797,7 @@ $('#editExamen').on('show.bs.modal', function(event) {
                 if (echo == "1") {
                     mensajeInfo()
                     mensajeEdit.html("El examen se ha editado con éxito");
-                    limpiarReporteE()
-                    cargar()
+                    limpiarExamenE()
                     cargarDetalle( $("#idReporteExE").val() )
                 } else {
                     mensajeAlerta()
@@ -880,10 +877,6 @@ function limpiarReporte() {
     $("#materia").val("");
 }
 
-function limpiarReporteE() {
-    $("#materiaE").val("");
-}
-
 function limpiarAlumno() {
     $("#codigoA").val("");
     $("#nombre").val("");
@@ -894,6 +887,25 @@ function limpiarAlumno() {
     $("#comentario").val("");
 }
 
+function limpiarDiaAsistencia() {
+    $("#numeroAs").val("");
+    $("#fechaAs").val("");
+}
+
+function limpiarActividad() {
+    $("#nombreAc").val("");
+    $("#fechaAc").val("");
+}
+
+function limpiarExamen() {
+    $("#nombreEx").val("");
+    $("#fechaEx").val("");
+}
+
+function limpiarReporteE() {
+    $("#materiaE").val("");
+}
+
 function limpiarAlumnoE() {
     $("#codigoAE").val("");
     $("#nombreE").val("");
@@ -902,6 +914,21 @@ function limpiarAlumnoE() {
     $("#selectCE").prop('checked', false);
     $("#motivoE").val("");
     $("#comentarioE").val("");
+}
+
+function limpiarDiaAsistenciaE() {
+    $("#numeroAsE").val("");
+    $("#fechaAsE").val("");
+}
+
+function limpiarActividadE() {
+    $("#nombreAcE").val("");
+    $("#fechaAcE").val("");
+}
+
+function limpiarExamenE() {
+    $("#nombreExE").val("");
+    $("#fechaExE").val("");
 }
 
 function cargarDetalle(idReporte) {

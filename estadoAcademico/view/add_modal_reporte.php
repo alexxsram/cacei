@@ -16,7 +16,7 @@
                 </button>
             </div>
 
-            <form id="addReporteF" method="post">
+            <form id="addReporteF" method="POST">
                 <div class="modal-body">
                     <div class="alert alert-info text-justify" role="alert">
                         Por favor, rellene los campos debajo, revisando que estos <b>sean correctos y correspondan a datos reales</b>, ya que estos se usarán para realizar el reporte de 
@@ -94,7 +94,7 @@
                 </button>
             </div>
 
-            <form id="addAlumnoF" method="post">
+            <form id="addAlumnoF" method="POST">
                 <div class="modal-body">
                     <div class="alert alert-info text-justify" role="alert"> 
                         Para prever  los posibles problemas de rezago, reprobación o abandono, de los alumnos,  es conveniente atender en tiempo y forma los puntos de alerta,
@@ -209,7 +209,7 @@
                 </button>
             </div>
 
-            <form id="addDiaAsistenciaF" method="post" class="form-horizontal">
+            <form id="addDiaAsistenciaF" method="POST">
                 <div class="modal-body">
                     <div class="alert alert-info text-justify" role="alert"> 
                         La captura de asistencias es importante para así llevar un control de cuando asiste el alumno y el día.
@@ -272,7 +272,7 @@
                 </button>
             </div>
 
-            <form id="addActividadF" method="POST" class="form-horizontal">
+            <form id="addActividadF" method="POST">
                 <div class="modal-body">
                     <div class="alert alert-info text-justify" role="alert">
                         El registrar las actividades, permite administrar que actividad es dada en una clase.
@@ -510,7 +510,7 @@
     </div>
 </div>
 
-<!-- Modal editar examen -->
+<!-- Modal calificar examen -->
 <div class="modal fade" id="takeExamen" tabindex="-1" role="dialog" aria-label="takeAsistanceLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
